@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PLUS 성형외과에 오신것을 환영합니다.</title>
+    
+    <!-- 1 . 파비콘   -->
+    
+    <!-- 구형 브라우저   -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon16.ico">
+    
+    <!--  신형 브라우저와 안드로이드폰  -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon32.png">
+    
+    <!-- 아이폰3 이하  -->
+    <link rel="apple-touch-icon" size="57x57" href="favicon57.png">
+    
+    <!--  아이패드  -->
+    <link rel="apple-touch-icon" size="64X64" href="favicon64.png">
+    
+    <!--  아이폰4 이상  -->
+    <link rel="apple-touch-icon" size="114x114" href="favicon128.png">
+    
+    <!--  IE10 이상  -->
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="favicon-144.png">
+    
+    
+    <!-- 2. 메타데이터 개발 공통사항 (html 문서 정보)  -->
+    
+    <!--  기본 실행할 스타일 시트 지정  -->
+    <meta http-equiv="default-style" content="phone">
+    <link rel="stylesheet" href="phone.css" title="phone">
+    <link rel="stylesheet" href="desktop.css" title="desktop">
+    
+    <!--  자동 새로고침 설정  -->
+    <meta http-equiv="refresh" content="180"> <!--    3분마다 새로고침 --> 
+
+    <!--  데스크탑에서 IE로 웹 문서를 열때 가장 최신 버전으로 실행 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    
+    
+    <!--  앱(웹사이트) 이름  -->
+    <meta name="application-name" content="PLUS hospital Site">
+    
+    <!-- 웹사이트 저작자  -->
+    <meta name="author" content="yeo kyunghee">
+    
+    <!-- 현재 문서의 설명   -->
+    <meta name="description" content="PLUS hospital Site Mainpage">
+    
+    <!-- 현재 문서의 저작 도구  -->
+    <meta name="description" content="Brakets">
+    
+    <!-- 검색 엔진에서 검색되게 할 키워드  -->
+    <meta name="keywords" content="성형외과, 대전성형외과, 둔산동성형외과, 대전 성형수술 잘하는 병원">
+    
+    
+    
+    
+    <!--반응형, 모바일, 태블릿 사이트일 경우 뷰포트 설정 (디바이스 크기에 맞춰라, 배율은 1:1, 핀치 작동은 no )-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    
+    
+    
+    
+    <!--  모바일 : device-width가 767px 이하일경우  -->
+    <link rel="stylesheet" href="mobil.css" media="screen and (max-width:767px)">
+    
+    <!--  태블릿 : device-width가 768px이상~ 959px 이하일경우  -->
+    <link rel="stylesheet" href="tablet.css" media="screen and (min-width:768px) and (max-width:959px)">
+    
+    <!--  데스크탑 : device-width가 960px 이상일경우  -->    
+    <link rel="stylesheet" href="desktop.css" media="screen and (min-width:960px)">
+    
+    <!-- 프린터 : device-width가 960px 이상일경우  -->    
+    <link rel="stylesheet" href="print.css" media="print">    
+    
+    <!-- 모든기기  -->    
+    <link rel="stylesheet" href="all.css" media="all">   
+    
+    
+    
+    
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Noto+Serif+KR" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+<!--    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300" rel="stylesheet">  -->
+    
+    
+    
+    <link rel="stylesheet" href="com.css">
+    
+<!--    <link rel="stylesheet" href="grid.css">-->
+    
+    <link rel="stylesheet" href="main.css">
+    
+    
+    <script src="./js/jquery-latest-1.11.1.js"></script>
+    
+    <script>
+        
+    $(function(){
+        var imgWd = parseInt($(".banBox2 li").width());
+        var imgMar = parseInt($(".banBox2 li").css("margin"));
+        var imgAni = imgWd + imgMar;
+        var intv = setInterval(function(){lAni();},3000);
+        function lAni(){
+            $(".imgBox").not(":animated").animate({"margin-left":-imgAni+"px"}, 600, function(){$(".imgBox li").eq(0).appendTo($(".imgBox"));
+            $(".imgBox").css("margin-left","0px");
+            });
+        }
+    });
+        
+    </script>
+  
+  
+<!-- 지도입력 스크립트  -->
+
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script> 
+
+    
+<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6L5gntr478WnnCF5VcJUk-nXnXxGehmk&callback=initMap"></script> -->
+
+<!--
+구글지도 api key발급 -> 구글 로그인 -> 시작하기버튼 ->Maps 선택->NEXT->YES
+->결제 계정 만들기->맨밑에 무료 평가판 만들기->프로젝트 만들기->새프로젝트만들기
+
+1.구글지도 api key 발급 사이트로 이동하여 지도 API서비스 신청
+2. https://console.cloud.google.com/getting-started/?pli
+3. API 서비스 -> 사용자 인증정보 -> 인증키 발급
+
+-->
+<!--AIzaSyB6L5gntr478WnnCF5VcJUk-nXnXxGehmk-->
+
+<script> 
+//좌표 값을 바꿔서 입력 36.3491563,127.3776857
+
+function initialize() {
+
+  var myLatlng = new google.maps.LatLng(36.351205, 127.37789620000001);
+
+  var mapOptions = {
+
+    zoom: 17,
+
+    center: myLatlng
+
+  }
+
+  var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+
+ 
+
+  var marker = new google.maps.Marker({
+
+      position: myLatlng,
+
+      map: map,
+
+      title: '플러스성형외과'	  //레이블을 바꿔서 입력
+
+  });
+
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+ </script> 
+ 
+ 
+ 
+ 
+<script>
+    
+$(window).scroll(function(){
+    var scTop= $("body, html").scrollTop();
+    if(scTop>=100){
+        $(".hdFrame, #gnb a, .lstBtn span").addClass("on");
+    }
+    else{
+        $(".hdFrame, #gnb a, .lstBtn span").removeClass("on");
+    }
+});    
+    
+</script>
+ 
+ 
+ 
+<!-- 지도입력 스크립트 끝 -->
+  
+</head>
+<body>
+  
+    <!-- 헤더 영역  -->
+        <div class="hdFrame">
+        
+        </div>
+    
+   <header id="hd">
+ 
+      <div class="wrap">  
+          
+       <a href="index.html" class="logo">
+       <img src="img/logo3.png" class="logoimg1"alt="앰블럼">
+       <img src="img/logo_on.png" class="logoimg2"alt="앰블럼">
+       </a>
+       
+       <nav id="gnb">
+           <ul>
+               <li><a href="intro.html">병원소개</a></li>
+               <li><a href="course.html">진료과목</a></li>
+               <li><a href="new.html">커뮤니티</a></li>
+               <li><a href="online.html">온라인상담</a></li>
+               <li><a href="howtocome.html">오시는길</a></li>
+           </ul>
+       </nav>
+       
+       <label for="ck" class="lstBtn">
+           <span class="stick"></span>
+           <span class="stick"></span>
+           <span class="stick"></span>
+           <span class="stick"></span>
+       </label>
+       
+       </div>
+       
+   </header>
+   <!-- 헤더 영역  -->
+   
+   
+   
+ 
+   <main id="content">
+   
+    <!-- 비주얼 영역  -->    
+       <figure id="vs">
+           
+           <input type="radio" name="raItem" id="ra1" checked>
+           <input type="radio" name="raItem" id="ra2">
+           
+            <ul class="banBox">
+                <li>
+                    <a href="">
+                        <img src="img/vs4.png" alt="병원 홍보 비주얼">
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="">
+                        <img src="img/vs5.png" alt="플러스 성형외과 의료진 비주얼">
+                    </a>
+                </li>
+            </ul>
+            
+            <ul class="btnBox">
+                <li>
+                <label for="ra1" class="vsbtn active"></label>
+                </li>
+                <li>
+                <label for="ra2" class="vsbtn"></label>
+                </li>
+            </ul>
+           
+       </figure>
+<!-- 비주얼 영역  -->
+     
+     
+ <!-- page1  -->     
+     
+      <div class="page" id="page1">
+         
+          <aside class="page1_side">
+              <h1 class="pageTit">PLUS</h1>
+              <p class="pageCom">
+                  밸런스를 고려한 개인별 맞춤성형.<br><strong>PLUS</strong>의 장점을 소개합니다.
+              </p>
+              
+                <!--  <span class="hvTxt">  </span>-->
+              
+              <a href="intro.html" class="detail">
+                  <span>
+                  병원소개 바로가기
+                  </span>
+              </a>
+          </aside>
+          
+          <div class="banBox2">
+              <ul class="imgBox">
+                 
+                  <li class="item1">
+                      <h1 class="num">01</h1>
+                      <h2 class="banTit">최첨단 장비</h2>
+                      <img src="img/tech.jpg" alt="최첨단 장비 이미지">
+                  </li>
+                  
+                  <li class="item2">
+                      <h1 class="num">02</h1>
+                      <h2 class="banTit">안락한 휴게실</h2>
+                      <img src="img/lounge.jpg" alt="휴게실 이미지">
+                  </li>
+                  
+                  <li class="item3">
+                      <h1 class="num">03</h1>
+                      <h2 class="banTit">수술 후 관리 시스템</h2>
+                      <img src="img/as.jpg" alt="관리 시스템 이미지">
+                  </li>
+                  
+                  <li class="item4">
+                      <h1 class="num">04</h1>
+                      <h2 class="banTit">1:1 맞춤 성형</h2>
+                      <img src="img/customer_service.jpg" alt="맞춤 상담 이미지">
+                  </li>
+                  
+              </ul>
+          </div>
+          
+      </div>
+       
+       
+      <div class="page" id="page2">
+         
+          <div class="wrap">
+              <h1 class="pageTit">
+                  <span class="txt1">PLUS</span>
+              SPECIAL</h1>
+              
+              <p class="pageCom">자연스럽고 전문적인 PLUS의 기술</p>
+              
+              <ul class="lst">
+                 
+                  <li>
+                      <a href="">
+                          <img src="img/eye.png" alt="눈 성형 썸네일">
+                      </a>
+                      <span class="itemTit">눈성형</span>
+                  </li>
+                  
+                  <li>
+                      <a href="">
+                      <img src="img/nose.png" alt="코 성형 썸네일">
+                      </a>
+                      <span class="itemTit">코성형</span>
+                  </li>
+                  
+                  <li>
+                      <a href="">
+                      <img src="img/chest.png" alt="가슴 성형 썸네일">
+                      </a>
+                      <span class="itemTit">가슴성형</span>
+                  </li>
+                  
+                  <li>
+                      <a href="">
+                      <img src="img/face.png" alt="안면윤곽 썸네일">
+                      </a>
+                      <span class="itemTit">안면윤곽</span>
+                  </li>
+                  
+                  <li>
+                      <a href="">
+                      <img src="img/body.png" alt="체형성형 썸네일">
+                      </a>
+                      <span class="itemTit">체형성형</span>
+                  </li>
+                  
+              </ul>
+          </div>
+          
+      </div> 
+       
+     
+     
+     
+       <div class="page" id="page3">
+           <div class="wrap">
+               <ul class="p3box">
+                  
+                   <li class="col12 first item1">
+                   
+                    <a href="#" class="box">
+                       <h3 class="nTit evnt">EVENT</h3>
+                       <h2 class="pTit">[수험생이벤트]</h2>
+                       <p class="pContent">감사 고객 프로모션 수험생 이벤트!
+                       겨울 방학을 맞아 고생한<br> 수험생들을 위해 플러스가 준비한
+                       할인 혜택!<br> 눈매 교정/ 코 성형/ 피부 관리까지!<br>
+                       플러스 성형외과의 전문적인 관리로<br> 미모에 아름다움을 PLUS 하세요.
+                       </p>
+                       <p class="nDate">2018-12-11</p>
+                     </a>
+                      
+                      <a class="box abs" style="padding: 0">
+                           <img src="img/event2.png" alt="이벤트 이미지">
+                       </a>
+                       
+                   </li>
+                   
+                   <li class="col6 first item2">
+                     
+                      <a href="#" class="box">
+                           <h3 class="nTit">NEWLETTER</h3>
+                           <h2 class="pTit">정재용 원장 FATS학회 참가</h2>
+                           <p class="nDate">2018-12-30</p>
+                     </a>
+                     
+                   </li>
+                   
+                   <li class="col6 item3">
+                     
+                      <a href="#" class="box">
+                           <h3 class="nTit">INFORMATION</h3>
+                           <h2 class="pTit">[휴진안내] 설연휴 휴진 안내</h2>
+                           <p class="nDate">2019-01-09</p>
+                       </a>
+                       
+                   </li>
+                   
+               </ul>
+           </div>
+       </div>
+       
+       
+       
+       <div class="page" id="page4">
+           <div class="wrap">
+              
+               <ul>
+                   <li class="col4 first">
+                       <a href="https://blog.naver.com/whats123" class="item1">
+                           <p class="com">PLUS 성형외과<br>
+                           네이버블로그 바로가기</p>
+                       </a>
+                    </li>
+                    
+                   <li class="col4">
+                       <a href="https://www.facebook.com/pages/PLUS-Aestheic-Plastic-Surgery-Clinic/751439868310444" class="item2">
+                           <p class="com">PLUS 성형외과<br>
+                           페이스북 바로가기</p>
+                       </a>
+                   </li>
+                   
+                   <li class="col4">
+                       <a href="https://pf.kakao.com/_RTVMM" class="item3">
+                           <p class="com">PLUS 성형외과<br>
+                           카톡플친 바로가기</p>
+                       </a>
+                   </li>
+                    
+               </ul>
+           </div>
+       </div>
+       
+       
+       
+       <div class="page" id="page5">
+           <div class="wrap">
+              
+               <ul>
+                   <li class="col4 item1 first">
+                       <h2 class="itemTit">PLUS 성형외과</h2>
+                       <h1 class="telTxt">042-486-6543</h1>
+                       <p class="itemData">대전광역시 서구 둔산2동 1040 둔산미래빌딩 6층<br>
+                       (타임월드 네거리/갤러리아 타임월드점 건너편)
+                       </p>
+                       <p class="itemData"> 팩스 번호 : 042-483-6543 <br> 원장 : 신영진</p>
+                   </li>
+                   
+                   <li class="col4 item2">
+                      
+                       <h2 class="itemTit">진료시간</h2>
+                       <p class="itemData">평일진료 AM 10:00 ~ PM 6:30<br>
+                                          토요일진료 AM 10:00 ~ PM 4:00<br>
+                                           점심시간 PM 12:00 ~ PM 01:00<br>
+                        </p>
+                        
+                        <p class="itemData">※ 일요일 / 공휴일 휴진</p>
+                        
+                   </li>
+                   
+                   <li class="col4 item3">
+                      
+                       <h2 class="itemTit">찾아오시는길</h2>
+                        
+                       <div id="mapFrame">  
+                         
+                          <div id="map_canvas" style="width:350px; height:200px">
+                              
+                          </div>
+                          
+                       </div>
+                       
+                   </li>
+               </ul>
+               
+           </div>
+       </div>
+       
+       
+       
+   </main>
+
+ 
+ 
+  
+<!-- 푸터 영역 -->
+
+ 
+ <footer id="ft">
+     <div class="wrap">
+         <p class="copyright">Copyrights(c)PLUS PLASTIC SURGERY. ALL right Reserved. SITE BY YEO.</p>
+         <div class="ftlogo"></div>
+     </div>
+ </footer>
+ 
+
+<!-- 푸터 영역 -->  
+ 
+ 
+  
+<!-- 사이트맵 영역  -->   
+   <input type="checkbox" id="ck">
+   
+   <div id="popFrm">
+      
+      
+       <label for="ck" class="closeBtn">닫기</label>
+          
+        
+       <div class="popBox">
+           <ul class="item1">
+               <li>
+               <h2>
+               <a href="intro.html">병원소개</a>
+               </h2>
+               </li>
+               <li>
+               <a href="intro.html#page1">병원소개</a>
+               </li>
+               <li>
+               <a href="intro.html#page2">의료진소개</a>
+               </li>
+               <li>
+               <a href="intro.html#page3">진료안내</a>
+               </li>
+               <li>
+               <a href="intro.html#page4">시설안내</a>
+               </li>
+           </ul>
+           
+           <ul class="item2">
+               <li>
+               <h2>
+               <a href="course.html">진료과목</a>
+               </h2>
+               </li>
+               
+               <li>
+                   <a href="course.html#page1">눈성형</a>
+               </li>
+               
+               <li>
+                   <a href="course.html#page2">코성형</a>
+               </li>
+               
+               <li>
+                   <a href="course.html#page3">가슴성형</a>
+               </li>
+               
+               <li>
+                   <a href="course.html#page4">안면윤곽</a>
+               </li>
+               
+               <li>
+                   <a href="course.html#page5">리프팅</a>
+               </li>
+               
+               <li>
+                   <a href="course.html#page6">체형성형</a>
+               </li>
+               
+               <li>
+                   <a href="course.html#page7">스킨케어</a>
+               </li>
+           </ul>
+           
+           <ul class="item3">
+              
+               <li>
+               <h2>
+               <a href="news.html">커뮤니티</a>
+               </h2>
+               </li>
+
+               <li>
+                   <a href="news.html#page1">이벤트</a>
+               </li>
+               
+               <li>
+                   <a href="news.html#page2">공지사항</a>
+               </li>
+               
+               <li>
+                   <a href="news.html#page3">PLUS STORY</a>
+               </li>
+               
+               <li>
+                   <a href="news.html#page3">전후사진</a>
+               </li>
+              
+               
+           </ul>
+           
+           <ul class="item4">
+               <li>
+               <h2>
+               <a href="online.html">온라인상담</a>
+               </h2>
+               </li>
+               
+               <li>
+               <a href="online.html#page1">온라인상담</a>
+               </li>
+               
+               <li>
+               <a href="online.html#page2">온라인예약</a>
+               </li>
+               
+           </ul>
+           
+           <ul class="item5">
+               <li>
+               <h2>
+               <a href="howtocome.html">오시는길</a>
+               </h2>
+               </li>
+               
+               <li>
+               <a href="howtocome.html">약도</a>
+               </li>
+           </ul>
+           
+       </div>
+       
+   </div>
+   
+<!-- 사이트맵 영역  -->   
+   
+   
+   
+   
+<!-- 퀵메뉴 영역  -->
+  
+  
+  <aside id="quick">
+      <div class="qWrap">
+          <ul class="top">
+            
+             <li>
+                 <a href="" class="qlogo"></a>
+             </li>
+             
+              <li>
+                  <a href="joinForm.html" class="hv">회원가입</a>
+              </li>
+              
+              <li>
+                  <a href="loginForm.html" class="hv">로그인</a>
+              </li>
+              
+              <li>
+                  <a href="https://pf.kakao.com/_RTVMM" class="hv">카톡상담</a>
+              </li>
+              
+              <li>
+              <a href="#" class="hv">이벤트</a>
+              </li>
+              
+          </ul>
+          
+          <ul class="bottom">
+              <li>
+                  <a href="https://blog.naver.com/whats123" class="yellow">블로그</a>
+              </li>
+              <li>
+                  <a href="https://www.facebook.com/pg/%ED%94%8C%EB%9F%AC%EC%8A%A4%EC%84%B1%ED%98%95%EC%99%B8%EA%B3%BC-PLUS-Aesthetic-Plastic-Surgery-Clinic-751439868310444/about/?ref=page_internal" class="sky">페이스북</a>
+              </li>
+              <li>
+                  <a href="#" class="toTop">TOP</a>
+              </li>
+          </ul>
+          
+      </div>
+  </aside>
+  
+
+
+   
+   
+   
+   
+   
+   
+   
+
+    
+</body>
+</html>

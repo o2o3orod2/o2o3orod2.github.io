@@ -1,0 +1,228 @@
+@charset "utf-8";
+
+
+        
+      /*   초기화 영역    */
+        *{margin:0; padding:0;}
+        body, html {width: 100%; height:100;
+                    font-family: 'Nanum Gothic', sans-serif;}
+        /*  font-family: 'Noto Serif KR', serif;*/
+        ul{list-style:none;}
+        a{text-decoration: none;}
+        .wrap{width:1200px; margin:0 auto; min-width:1200px;
+        }
+        /*    초기화 영역 끝    */
+        
+        
+        
+        
+        /*   헤더영역     */
+        #hd{width:100%; height:100px; position: fixed; z-index: 90;
+            left:0 ; top:0;
+        }
+        .logo{float:left; display: block; margin-top:31px; 
+        }
+        
+        #gnb{float:right; height: 38px; margin-top:31px; margin-right: 50px;
+        }
+        #gnb li{float:left; margin: 0px 15px;
+        }
+        #gnb li a{display: block; line-height: 42px; font-size:18px; color:#fff; font-weight: 500;
+        }
+        #gnb li a:after{content:"·"; padding-left:25px;
+        }
+        #gnb li:last-child a:after{content:"";
+        }
+        
+        #hd .wrap{position: relative;
+        }
+        .lstBtn{display: block; width:60px; height: 60px;
+                position: absolute; top:20px; right: 0px;
+                cursor:pointer;
+        }
+        .stick{display:block; width:34px; height:4px;
+                    margin:0 auto; margin-top:5px; background:#fff;
+                    float:right; clear: both; border-radius:2px;
+        }
+        .lstBtn .stick:first-child{margin-top:16px;
+        }
+        .lstBtn .stick:nth-child(2n){width:24px; transition: 0.3s;
+        }
+        .lstBtn:hover .stick:nth-child(2n){width:34px;
+        }
+        
+        /*   헤더영역 끝    */
+        
+        
+        #content {width:100%;
+        }
+        #vs{width:100%; height:auto; overflow-x:hidden;
+        }
+        .banBox{width:200%; height: auto; transition: 0.6s;
+        }
+        .banBox li{float:left; width:50%;
+        }
+        .banBox li img{display: block; width:100%; height: auto;
+        }
+        
+        #ra1:checked ~ .banBox {margin-left:0;
+        }
+        #ra2:checked ~ .banBox {margin-left:-100%;
+        }
+        
+        .btnBox{position: absolute; top: 87%; width:100%
+        }
+        .btnBox li:first-child{left:48%;
+        }
+        .btnBox li:last-child{right:48%;
+        }
+        .btnBox li{position: absolute;
+        }
+        .btnBox li .vsbtn{display: block; width:24px; height: 24px; background: #333; border-radius: 12px; cursor: pointer;
+        }
+        #ra1, #ra2{display: none;
+        }
+        #ra1:checked ~ .btnBox li:first-child .vsbtn{width:40px; background: #fff;
+        }
+        #ra2:checked ~ .btnBox li:last-child .vsbtn{width:40px; background: #fff;
+        }
+        
+        
+        
+        /*    사이트맵 부분    */
+        
+        #popFrm{width: 100%; height: 100%; background:rgba(18, 18, 18, 0.7);
+                position: fixed; top:-110%; left:0; z-index:100; transition: 0.5s;
+        }
+        #ck{display: none;
+        }
+        #ck:checked + #popFrm {top:0;
+        }
+        
+        .closeBtn{position: absolute; right:20%; top:5%; width: 40px; height: 40px;
+            display: block; background-image:url(img/closeBtn.png); border:solid 1px #fff;
+            text-indent: -9999px; cursor: pointer;
+        }
+        
+        
+        
+        .popBox{width:1000px; height: 60%;  margin:0 auto; margin-top:7%;
+                background:#fff;
+        }
+        .popBox ul{float:left; height:100%; width:20%; border-right:1px solid #83babb; box-sizing: border-box;
+        }
+        .popBox ul:last-child{border-style: none;}
+        
+        .popBox li h2{background:#5aaaab; color:black; text-align: center; height: 50px; line-height: 40px;
+        }
+        
+        .popBox li h2 a{color:#fff; font-size:0.8em; font-weight: 100; display: block; padding-top:3px; padding-right: 10px;
+        }
+        
+        .popBox li a{display: block; color:dimgrey; line-height: 40px; text-indent: 20px; font-weight: 500;
+        }
+        
+        
+        
+        
+        /*   퀵     */
+        
+        #quick{position: fixed; right:0; top:0; height: 100%; width:100px; background: #fff; z-index: 95;
+        }
+        
+        .qWrap{width: 100%; height: 100%; position: relative; border-left:1px solid #f0f0f0;
+        }
+        
+        #quick ul{position: absolute; right:0; width: 100%;
+        }
+        
+        #quick .top{top:0;
+        }
+        
+        #quick .bottom{bottom:0;
+        }
+        
+        #quick li{clear: both; width: 100%;
+        }
+        
+        #quick li a{display: block; line-height: 40px; color:#999; font-size: 0.85em; text-align: center; border-bottom: 1px solid #e0e0e0;
+        }
+        
+        #quick li a.qlogo{height: 60px; background-image:url(img/logo4.png); background-repeat:no-repeat;
+                            background-position: center center;
+        }
+        #quick li a.yellow{background-color: #ffa200; color:#fff;
+        }
+        
+        #quick li a.sky{background-color: #4d94e4; color:#fff;
+        }
+        
+        
+        #quick li a.toTop{background-color:#333; color:#fff; height: 60px; line-height: 20px;
+        }
+        
+        #quick li a.toTop:before{content:"^"; display: block; width:100%; font-size:30px; padding-top:13px;
+        }
+        
+        #quick li a.hv:hover{color:#fff; background-color: #333;
+        }
+        
+        /*   퀵     */
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    /*    스타일 태그 내부에 들어가는 경우 (위 내용은 외부파일로 지정)     */
+        
+        
+        h1{background:#333; color:#fff;}
+        
+        
+    /*   모바일 먼저 작성    */
+        @media screen and (max-width:767px) {
+            h1 {font-size:20px;}
+        }
+    
+    /*   태블릿    */
+        @media screen and (min-width:768px) and (max-width:959px) {
+            h1 {font-size:40px;}
+        }
+    /*   데스크탑    */
+        @media screen and (min-width:960px) {
+            h1 {font-size:60px;}
+        }
+        
+    /*   프린트    */
+        @media print (min-width:960px) {
+            h1 {font-size:60px; background: #fff; color:#333;}
+        }
+        
+    /*   모든기기    */
+        @media all (min-width:960px) {
+            h1 {cursor:pointer;}
+        }
+        
+        
+    /*  import 이용방법 (import 규칙은 style 안에 넣는다.)  */
+    
+    /*    모바일 먼저 작성   */
+    @import url("mobile.css") screen and (max-width:767px;);      
+        
+    /*    태블릿    */
+    @import url("tablet.css") screen and (min-width:768px;) and (max-width:959px;);
+        
+    /*    데스크탑    */
+    @import url("desktop.css") screen and (min-width:960px;);
+        
+    /*    프린트    */
+    @import url("print.css") print; 
+        
+    /*    모든기기    */
+    @import url("all.css") all;
+        
