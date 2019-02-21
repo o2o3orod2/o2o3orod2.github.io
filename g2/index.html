@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>행복도시 천안</title>
+    
+    <!-- 1 . 파비콘   -->
+    
+    <!-- 구형 브라우저   -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon/favicon16.ico">
+    
+    <!--  신형 브라우저와 안드로이드폰  -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon/favicon32.png">
+    
+    <!-- 아이폰3 이하  -->
+    <link rel="apple-touch-icon" size="57x57" href="img/favicon/favicon57.png">
+    
+    <!--  아이패드  -->
+    <link rel="apple-touch-icon" size="64X64" href="img/favicon/favicon64.png">
+    
+    <!--  아이폰4 이상  -->
+    <link rel="apple-touch-icon" size="114x114" href="img/favicon/favicon128.png">
+    
+    <!--  IE10 이상  -->
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="img/favicon/favicon144.png">
+    
+    
+    <!-- 2. 메타데이터 개발 공통사항 (html 문서 정보)  -->
+    
+    <!--  기본 실행할 스타일 시트 지정  -->
+    <meta http-equiv="default-style" content="phone">
+    <link rel="stylesheet" href="phone.css" title="phone">
+    <link rel="stylesheet" href="desktop.css" title="desktop">
+    
+    <!--  자동 새로고침 설정  -->
+    <meta http-equiv="refresh" content="180"> <!--    3분마다 새로고침 --> 
+
+    <!--  데스크탑에서 IE로 웹 문서를 열때 가장 최신 버전으로 실행 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    
+    
+    <!--  앱(웹사이트) 이름  -->
+    <meta name="application-name" content="천안시청 홈페이지">
+    
+    <!-- 웹사이트 저작자  -->
+    <meta name="author" content="yeo kyunghee">
+    
+    <!-- 현재 문서의 설명   -->
+    <meta name="description" content="천안시청 홈페이지 main page">
+    
+    <!-- 현재 문서의 저작 도구  -->
+    <meta name="description" content="Brakets">
+    
+    <!-- 검색 엔진에서 검색되게 할 키워드  -->
+    <meta name="keywords" content="천안시, 천안, 천안시청, 천안시청홈페이지, 천안홈페이지, 천안시홈페이지">
+    
+    
+    
+    
+    <!--반응형, 모바일, 태블릿 사이트일 경우 뷰포트 설정 (디바이스 크기에 맞춰라, 배율은 1:1, 핀치 작동은 no )-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    
+    
+    
+    
+    <!--  모바일 : device-width가 767px 이하일경우  -->
+    <link rel="stylesheet" href="mobil.css" media="screen and (max-width:767px)">
+    
+    <!--  태블릿 : device-width가 768px이상~ 959px 이하일경우  -->
+    <link rel="stylesheet" href="tablet.css" media="screen and (min-width:768px) and (max-width:959px)">
+    
+    <!--  데스크탑 : device-width가 960px 이상일경우  -->    
+    <link rel="stylesheet" href="desktop.css" media="screen and (min-width:960px)">
+    
+    <!-- 프린터 : device-width가 960px 이상일경우  -->    
+    <link rel="stylesheet" href="print.css" media="print">    
+    
+    <!-- 모든기기  -->    
+    <link rel="stylesheet" href="all.css" media="all">
+    
+    
+    <!-- 폰트 연결  -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Noto+Sans+KR" rel="stylesheet">
+
+    
+    
+    <!--  css 파일 연결  -->
+    <link rel="stylesheet" href="reset.css">
+    
+    <link rel="stylesheet" href="main.css">
+    
+    
+    <!--  스크립트 연결  -->
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="js/main.js"></script>
+    
+</head>
+<body>
+  
+    
+    <input type="checkbox" id="popClose">
+  
+   <div class="pop">
+   
+    <a href="#" class="popImg">
+        
+        
+    <label for="popClose" name="popBtn" class="closeBtn">
+    Close
+    </label>
+    
+    </a>
+       
+   </div>
+  
+   
+   <div class="pgWrap">
+   
+   <header class="hd">
+      
+      <div class="hdWrap">
+         
+         <h1 class="logo">
+            <a href="index.html">로고</a>
+         </h1>
+         
+         <nav id="gnb">
+             <ul class="mainGnb">
+                 <li>
+                     <a href="">로그인</a>
+                 </li>
+                 
+                 <li>
+                     <a href="">나의천안</a>
+                 </li>
+                 
+                 <li>
+                    <a href="">전자우편</a>
+                 </li>
+                 
+                 <li>
+                     <a href="sub3.html">천안소개</a>
+                 </li>
+                 
+                 <li>
+                     <a href="">시민참여</a>
+                 </li>
+                 
+                 <li>
+                     <a href="">부서안내</a>
+                 </li>
+                 
+                 <li>
+                    <a href="">청사안내</a>
+                 </li>
+                 
+                 
+             </ul>
+             
+
+             <ul class="subGnb">
+                 <li>
+                     <a href="">천안소식</a>
+                 </li>
+                 
+                 <li>
+                     <a href="">응답소</a>
+                 </li>
+                 
+                 <li>
+                     <a href="">정보공개</a>
+                 </li>
+                 
+                 <li>
+                     <a href="">분야정보</a>
+                 </li>
+             </ul>
+             
+             
+         </nav>
+          
+          
+      </div>
+       
+   </header>
+   
+   <div class="content">
+   
+   <div class="search">
+       <div class="searchWrap">
+           
+           <h1 class="sLogo">
+               <a href="">서브로고</a>
+           </h1>
+           
+           <div class="searchBox">
+              
+               <input type="text" class="searchBoxin" placeholder="검색어를 입력해주세요.">
+              
+               <div class="searchBtn">
+                   
+               </div> 
+           </div>
+           
+           <div class="weather">
+               
+           </div>
+           
+           
+           <div class="langLst">
+             
+              <select name="" id="" class="langLstin">
+                 <option value="ENGLISH">
+                     ENGLISH
+                 </option>    
+              </select>
+              
+              <div class="goBtn">
+                  
+              </div>
+          </div>
+           
+       </div>
+   </div>
+   
+<!--  content1 시작 -->
+ <div class="content1">
+  
+   <div class="vs">
+    
+     <ul class="vsBox">
+         <li class="img">
+             <a href="#">
+               <img src="img/slide5.png" alt="">
+             </a>
+         </li>
+         <li class="img">
+             <a href="#">
+               <img src="img/slide3.png" alt="">
+            </a>
+         </li>
+         <li class="img">
+            <a href="#">
+               <img src="img/slide4.png" alt="">
+          </a> 
+         </li>
+         <li class="img">
+              <a href="#">
+               <img src="img/slide2.png" alt="">
+              </a> 
+         </li>
+         <li class="img">
+              <a href="#">
+               <img src="img/slide1.png" alt="">
+              </a>
+         </li>
+     </ul>
+      
+     
+     <div class="btnBox"> 
+     <button class="next">
+         
+     </button>
+     <button class="pre">
+         
+     </button>
+      </div>
+        
+   </div>
+   
+   <!--    -->
+   
+   <div class="iconBox1">
+         
+         <ul class="iconBox1wrap">
+             <li class="con item1">
+                 <a href="#">
+                     <p class="conCom">빠르고 간편한 민원신청</p>
+                     <h2 class="conTit">민원신청</h2>
+                 </a>
+             </li>
+             
+             <li class="con item2">
+                 <a href="#">
+                     <p class="conCom">필요한 민원서식 찾기</p>
+                     <h2 class="conTit">민원서식</h2>
+                 </a>
+             </li>
+             
+             <li class="con item3">
+                 <a href="#">
+                     <p class="conCom">함께 공감하며 나아가겠습니다.</p>
+                     <h2 class="conTit">시장에게 바란다.</h2>
+                 </a>
+             </li>
+             
+         </ul>
+          
+      </div>
+
+</div>  
+<!--  content1 끝     -->
+     
+     
+
+<!-- content2 시작-->
+<div class="content2">
+     <div class="iconBox2">
+        
+         <ul class="iconBox2Wrap">
+             <li class="con2 item1">
+                 <a href="#">
+                    <h4>주정차단속</h4> 
+                 </a>
+            </li>
+             <li class="con2 item2">
+                 <a href="#">
+                     <h4>차량등록</h4>
+                 </a>
+                 
+             </li>
+             <li class="con2 item3">
+                 <a href="#">
+                     <h4>부동산정보</h4>
+                 </a>
+                 
+             </li>
+             <li class="con2 item4">
+                 <a href="#">
+                     <h4>전자민원</h4>
+                 </a>
+                 
+             </li>
+             <li class="con2 item5">
+                 <a href="#">
+                     <h4>지방세</h4>
+                 </a>
+                 
+             </li>
+             <li class="con2 item6">
+                 <a href="#">
+                     <h4>국세</h4>
+                 </a>
+                 
+             </li>
+             <li class="con2 item7">
+                 <a href="#">
+                     <h4>대형폐기물처리</h4>
+                 </a>
+                 
+             </li>
+             <li class="con2 item8">
+                 <a href="#">
+                     <h4>도서관</h4>
+                 </a>
+                 
+             </li>
+         </ul>
+         
+     </div>
+ </div>
+<!-- content2 끝-->  
+     
+
+<!-- content3 시작-->
+          
+    <div class="content3">
+       
+        <div class="conTit2">
+               <h2>천안의 흥</h2>
+           </div>
+           
+        <div class="festival">
+    
+            <div class="festivalImg">
+                
+            </div>
+            
+            <div class="txtBox">
+                <ul>
+                    <li>
+                        <a href="">
+                            <p><span class="ca">축제안내</span>
+                            2019 대흥 저수지 해맞이</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <p><span span class="ca">축제안내</span>
+                            천안 흥타령 춤 축제</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <p><span span class="ca">공연안내</span>
+                            126번째 행복콘서트 '아름다운나라'</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <p><span span class="ca">공연안내</span>
+                            천안 시립 교향악단 24회공연</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <p><span span class="ca">축제안내</span>
+                            자연과 함께하는 청정광덕 호두축제</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+        
+        <div class="socialMyor">
+           
+           <div class="txtBox2">
+                <p class="txtCom2">시민과 소통하는</p>
+                <h2><span class="color">시장 구본영</span>입니다.</h2>
+                <p class="txtcom3">· 시장에게 바란다.<br>
+                    · 공약&매니페스토
+                </p>
+                <a href="#" class="smBtn">열린시장실</a>
+            </div>
+        </div>
+        
+    </div>
+      
+<!-- content3 끝-->       
+   
+   
+   
+<!-- content4 시작-->
+   <div class="content4">
+      
+      <div class="helpBox">
+       <h2>분야별 도우미</h2>
+       
+       <button class="more">전체보기 ></button>
+       
+       <ul class="help">
+           <li class="con4 item1">
+               <a href="#">
+               <p class="helpCom">복지</p>
+               </a>
+           </li>
+           <li  class="con4 item2">
+               <a href="#">
+               <p class="helpCom">기업/농수산</p>
+               </a>
+           </li>
+           <li  class="con4 item3">
+               <a href="#">
+               <p class="helpCom">경제/세무</p>
+               </a>
+           </li>
+           <li  class="con4 item4">
+               <a href="#">
+               <p class="helpCom">도시/주택</p>
+               </a>
+           </li>
+           <li  class="con4 item5">
+               <a href="#">
+               <p class="helpCom">주택정보마당</p>
+               </a>
+           </li>
+           <li  class="con4 item6">
+               <a href="#">
+               <p class="helpCom">법률</p>
+               </a>
+           </li>
+           <li  class="con4 item7">
+               <a href="#">
+               <p class="helpCom">안전</p>
+               </a>
+           </li>
+           <li  class="con4 item8">
+               <a href="#">
+               <p class="helpCom">교육</p>
+               </a>
+           </li>
+           <li  class="con4 item9">
+               <a href="#">
+               <p class="helpCom">환경위생</p>
+               </a>
+           </li>
+           <li  class="con4 item10">
+               <a href="#">
+               <p class="helpCom">교통</p>
+               </a>
+           </li>
+       </ul>
+     </div>
+     
+     <div class="siteLst">
+         
+         <button class="setting">설정하기</button>
+         
+         <ul class="siteLstWrap">
+                <li>
+                    <a href="">· 천안 문화광광</a>
+                </li>
+                <li>
+                    <a href="">· 통합 예약 서비스</a>
+                </li>
+                <li>
+                    <a href="">· 미디어 소통센터</a>
+                </li>
+                <li>
+                    <a href="">· 올소365 민원관리 시스템</a>
+                </li>
+                <li>
+                    <a href="">· FUN IN CHEONAN</a>
+                </li>
+         </ul>
+         
+         
+     </div>
+      
+      
+       
+   </div>
+<!-- content4 끝-->  
+       
+
+<!--content5 시작-->
+
+<div class="content5">
+    
+    <h2>새소식</h2>
+    
+    <div class="newsBox">
+       
+        <div class="Col_1">
+           
+            <div class="col4">
+               
+               <p class="cartegory carte1">복지</p>
+               <div class="cont">
+                  <a href="#" class="newsImg1">
+                      
+                  </a>
+                  
+                  
+               </div>
+                
+            </div>
+            
+            <div class="col4">
+               
+                <p class="cartegory carte2">복지</p>
+                <div class="cont">
+                   <a href="#" class="newsImg2">
+                      
+                  </a>
+               </div>
+               
+            </div>
+            
+            <div class="col4">
+              <p class="cartegory carte3">도시</p>
+               <div class="cont">
+                   <a href="#" class="newsImg3">
+                      
+                  </a>
+               </div>
+                
+            </div>
+
+        </div>
+
+        <div class="Col_2">
+            
+            <div class="col4">
+               
+               <div class="cont">
+                    <h1 class="newsTit">
+                    <a href="#">영유아 발달장애 정밀검사비 지원</a>
+                    </h1>
+                   <p class="newsCom">천안시는 영유아 및 영유아인 자녀를 둔 부모님들을 위한 다양한 복지제도를 위해 힘 쓰고 있습니다.그 중 영유아검진 시 발달평과 결과에서 심화평가 권고 판정자에게 정밀검사비를 지원하고 있습니다. </p>
+               </div>
+                
+            </div>
+            
+            <div class="col4">
+               
+               <div class="cont">
+                    <h1 class="newsTit">
+                    <a href="#">함께 나누고 누리는 촘촘한 복지 실현</a></h1>
+                   <p class="newsCom">천안시는 모두가 누리는 따뜻한 도시를 만들기 위해 함께 나누고 누리는 촘촘한 복지를 실현합니다. 특히 올해는 노인과 장애인을 위한 다양한 혜택을 제공함으로써 복지 서비스 체감도를 높일 계획입니다.</p>
+                   
+               </div>
+                
+            </div>
+            
+            <div class="col4">
+               
+               <div class="cont">
+                   
+                    <h1 class="newsTit"><a href="#">더불어 잘사는 풍부한 도시를 꿈꾸다</a></h1>
+                   <p class="newsCom">
+                       충남권의 중추적인 산업환경을 조성하기 위해 LG생활건강 퓨처 일반산업단지, 도시첨단산업단지, 제6일반 산업단지 등을 확충해나갑니다.
+                   </p>
+                   
+               </div>
+                
+            </div>
+
+        </div>
+        
+        <div class="Col_3">
+            
+            <div class="col4">
+               
+               <div class="cont">
+                  <p class="cartegory carte4">도시</p>
+                  
+                   <h1 class="newsTit"><a href="#">아시아 무역사절단 1720만 달러 계약…</a></h1>
+                   <p class="newsCom">아시아 무역사절단 1720만 달러 계약 추진 성과 빛나다!
+천안시는 대한 무역 진흥 공사와의 협력 사업으로 방글라데시 다카, 말레이시아 쿠알라룸푸르에 파견한 ‘아시아 무역사절단’이 </p>
+                  
+                   
+               </div>
+                
+            </div>
+            
+            <div class="col4">
+               
+               <div class="cont">
+                  <p class="cartegory carte5">경제</p>
+                  <a href="#" class="newsImg5">
+                      
+                  </a>
+                   
+               </div>
+                
+            </div>
+            
+            <div class="col4">
+               
+               <div class="cont">
+                  <p class="cartegory carte6">도시</p>
+                  <h1 class="newsTit"><a href="#">미래를 꿈꾸는 활기찬 도시를 꿈꾸다</a></h1>
+                   <p class="newsCom">더 큰 천안, 더 큰 행복을 그려나가기 위한 천안의 4개년 운영계획을 [천안의 픽빅처] 시리즈로 전해드리고 있습니다. 이번에 전해드릴 천안의 네 번째 빅픽처는 미래를 꿈꾸는 활기찬 도시 입니다.</p>
+                   
+               </div>
+                
+            </div>
+
+        </div>
+        
+        <div class="Col_4">
+            
+            <div class="col4">
+               
+               <div class="cont">
+                   <p class="cartegory carte7">문화</p>
+                    <h1 class="newsTit"><a href="#">대한민국 축구종합센터 유치 본격화</a></h1>
+                   <p class="newsCom">제2NFC 후보지 선정 공모 참여…내년 1월 유치 신청 2월 확정 예정입니다.천안시가 대한민국 축구종합센터(가칭 이하 축구종합센터) 본격 유치에 나섰습니다.</p>
+                   
+               </div>
+                
+            </div>
+            
+            <div class="col4">
+               
+               <div class="cont">
+                   <h1 class="newsTit">
+                   <a href="#">Job 드림(Dream) 토크 - 청년의 미래를 말하다</a></h1>
+                   <p class="newsCom">지난 6월, 우리시는 전국 기초지자체 중 지역 일자리 목표 공시제를 가장 잘 이행한 것으로 인정받으면서 전국 지방자치단체 일자리 대상을 수상했습니다. </p>
+                   
+               </div>
+                
+            </div>
+            
+            <div class="col4">
+               
+               <div class="cont">
+                   
+                   <p class="cartegory carte8">경제</p>
+                    <h1 class="newsTit"><a href="#">중부권 동서횡단철도 부분적 예타면제 사업선정</a></h1>
+                   <p class="newsCom">천안시를 중심으로 12개 시군 시장 · 군수 협력체가 추진하는 중부권 동서횡단철도 건설사업 중 시발점인 당진 석문국가산단~합덕 구간이 예비타당성조사 면제 사업으로 선정됐습니다.</p>
+                   
+               </div>
+                
+            </div>
+
+        </div>
+    
+     <div class="Col_5">
+         
+         <div class="col41">
+            
+            <div class="cont">
+                
+                <h1 class="contTit">이벤트참여</h1>
+                
+                <button class="eventBtn">
+                    +
+                </button>
+                
+                <table class="event">
+                    <tr>
+                        <td class="eventing">[진행중]</td>
+                        <td class="eventSNS">페이스북</td>
+                        <td class="eventTit">3·1운동 100주년을 기념 이벤트</td>
+                    </tr>
+                    <tr>
+                        <td class="eventing">[진행중]</td>
+                        <td class="eventSNS">페이스북</td>
+                        <td class="eventTit">천안의 새로운 마스코트 이벤트</td>
+                    </tr>
+                    <tr>
+                        <td class="eventing">[진행중]</td>
+                        <td class="eventSNS blog">블로그</td>
+                        <td class="eventTit">천안의꿈 이벤트</td>
+                    </tr>
+                    <tr>
+                        <td class="eventing">[마감]</td>
+                        <td class="eventSNS">페이스북</td>
+                        <td class="eventTit">3·1운동 100주년을 기념 이벤트</td>
+                    </tr>
+                    <tr>
+                        <td class="eventing">[마감]</td>
+                        <td class="eventSNS blog">블로그</td>
+                        <td class="eventTit">올해 천안에서 이루고 싶은 여러분의 꿈은 무엇인가요?</td>
+                    </tr>
+                </table>       
+                
+            </div>
+             
+         </div>
+         
+         <div class="col41">
+            
+            <div class="cont">
+                <h1 class="contTit">이달의 행사 및 축제</h1>
+                
+                <button class="eventBtn">
+                    +
+                </button>
+                
+                <table class="event">
+                    <tr class="eventCol">
+                        <td class="eventSNS art">문화</td>
+                        <td class="eventTit2">우리동네 도서관 이색 프로그램 즐기기</td>
+                    </tr>
+                    <tr class="eventCol">
+                        <td class="eventSNS art">문화</td>
+                        <td class="eventTit2">천안 흥타령 전시관-천안 삶의 흔적 전시회</td>
+                    </tr>
+                    <tr class="eventCol">
+                        <td class="eventSNS art">문화</td>
+                        <td class="eventTit2">아라리로 엄태정 개인전, 두개의 날개와 낯선자</td>
+                    </tr>
+                    <tr class="eventCol">
+                        <td class="eventSNS history">역사</td>
+                        <td class="eventTit2">유관순 열사, 생애와 독립운동 전시관 </td>
+                    </tr>
+                    <tr class="eventCol">
+                        <td class="eventSNS edu">교육</td>
+                        <td class="eventTit2">겨울방학, 천안 박물관에서 여러가지 체험을 즐겨보자!</td>
+                    </tr>
+                </table>
+                
+            </div>
+             
+         </div>
+         
+         <div class="col41">
+            
+            <div class="cont">
+                <h1 class="contTit">생활정보</h1>
+                
+                <ul class="lifeinfo">
+                   
+                   <li>
+                       <a href="#">버스</a>
+                   </li>
+                   
+                   <li>
+                       <a href="#">지하철</a>
+                   </li>
+                   
+                   <li>
+                       <a href="#">도로소통</a>
+                   </li>
+                   
+                   <li>
+                       <a href="#">심야버스</a>
+                   </li>
+                   
+                   <li>
+                       <a href="#">내주변정보</a>
+                   </li>
+                   
+                   <li>
+                       <a href="#">부동산</a>
+                   </li>
+                    
+                </ul>
+                
+                
+            </div>
+             
+         </div>
+         
+         
+     </div>
+    
+    
+    
+    </div>
+    
+    
+    
+    
+    
+</div>
+
+<!--content5 끝-->
+   
+
+
+
+<!--content6 시작-->
+
+<div class="content6">
+    
+    
+    <div class="banArea">
+        
+        <ul class="banBox">
+            <li class="banner ban1">
+                
+            </li>
+            <li class="banner ban2">
+                
+            </li>
+            <li class="banner ban3">
+                
+            </li>
+            <li class="banner ban4">
+                
+            </li>
+            <li class="banner ban5">
+                
+            </li>
+            <li class="banner ban6">
+                
+            </li>
+            <li class="banner ban7">
+                
+            </li>
+            <li class="banner ban8">
+                
+            </li>
+        </ul>
+        
+    </div>
+    
+    
+</div>   
+  
+<!--content6 끝-->
+  
+  
+  <footer class="ft">
+      
+      <div class="ftWrap1">
+         
+         <ul class="linkBox">
+             <li>
+                 <a href="">홈페이지 도우미</a>
+             </li>
+             
+             <li>
+                 <a href="">개인정보처리방침</a>
+             </li>
+             
+             <li>
+                 <a href="">저작권 정책</a>
+             </li>
+             
+             <li>
+                 <a href="">찾아오시는길</a>
+             </li>
+             
+             <li>
+                 <a href="">사이트맵</a>
+             </li>
+         </ul>
+         
+         <ul class="snsBox">
+             <li class="snsIcon fb">
+                 <a href=""></a>
+             </li>
+             <li class="snsIcon blog">
+                 <a href=""></a>
+             </li>
+             <li class="snsIcon kakao">
+                 <a href=""></a>
+             </li>
+             <li class="snsIcon youtube">
+                 <a href=""></a>
+             </li>
+             <li class="snsIcon twitter">
+                 <a href=""></a>
+             </li>
+             <li class="snsIcon instar">
+                 <a href=""></a>
+             </li>
+         </ul>
+          
+      </div>
+      
+      <div class="ftWrap2">
+         
+         <p class="ftcon">
+             본 웹사이트에 게시된 이메일 주소가 자동수집되는 것을 거부하며, 위반시 "정보통신망법"에 의해 처벌됨을 유념하시기 바랍니다.<br>(31162) 충남 천안시 서북구 번영로 156 / 천안시 콜센터 : 1577-3900<br>Copyrightⓒ Cheonan-Si. All rights reserved.
+         </p>
+          
+          <div class="ftImg">
+              <img src="img/gcs.png" alt="" width="120px" height="40px">
+              <img src="img/mk.png" alt=""
+              width="100px" height="60px">
+          </div>
+          
+      </div>
+      
+  </footer>
+  
+   
+   </div>
+   
+   
+  </div> 
+    
+</body>
+</html>
