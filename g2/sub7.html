@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>행복도시 천안</title>
+    
+     <title>행복도시 천안</title>
+    
+    <!-- 1 . 파비콘   -->
+    
+    <!-- 구형 브라우저   -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon/favicon16.ico">
+    
+    <!--  신형 브라우저와 안드로이드폰  -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon/favicon32.png">
+    
+    <!-- 아이폰3 이하  -->
+    <link rel="apple-touch-icon" size="57x57" href="img/favicon/favicon57.png">
+    
+    <!--  아이패드  -->
+    <link rel="apple-touch-icon" size="64X64" href="img/favicon/favicon64.png">
+    
+    <!--  아이폰4 이상  -->
+    <link rel="apple-touch-icon" size="114x114" href="img/favicon/favicon128.png">
+    
+    <!--  IE10 이상  -->
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="img/favicon/favicon144.png">
+    
+    
+    <!-- 2. 메타데이터 개발 공통사항 (html 문서 정보)  -->
+    
+    <!--  기본 실행할 스타일 시트 지정  -->
+    <meta http-equiv="default-style" content="phone">
+    <link rel="stylesheet" href="phone.css" title="phone">
+    <link rel="stylesheet" href="desktop.css" title="desktop">
+    
+    <!--  자동 새로고침 설정  -->
+    <meta http-equiv="refresh" content="180"> <!--    3분마다 새로고침 --> 
+
+    <!--  데스크탑에서 IE로 웹 문서를 열때 가장 최신 버전으로 실행 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    
+    
+    <!--  앱(웹사이트) 이름  -->
+    <meta name="application-name" content="천안시청 홈페이지">
+    
+    <!-- 웹사이트 저작자  -->
+    <meta name="author" content="yeo kyunghee">
+    
+    <!-- 현재 문서의 설명   -->
+    <meta name="description" content="천안시청 홈페이지 main page">
+    
+    <!-- 현재 문서의 저작 도구  -->
+    <meta name="description" content="Brakets">
+    
+    <!-- 검색 엔진에서 검색되게 할 키워드  -->
+    <meta name="keywords" content="천안시, 천안, 천안시청, 천안시청홈페이지, 천안홈페이지, 천안시홈페이지">
+    
+    
+    
+    
+    <!--반응형, 모바일, 태블릿 사이트일 경우 뷰포트 설정 (디바이스 크기에 맞춰라, 배율은 1:1, 핀치 작동은 no )-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    
+    
+    
+    
+    <!--  모바일 : device-width가 767px 이하일경우  -->
+    <link rel="stylesheet" href="mobil.css" media="screen and (max-width:767px)">
+    
+    <!--  태블릿 : device-width가 768px이상~ 959px 이하일경우  -->
+    <link rel="stylesheet" href="tablet.css" media="screen and (min-width:768px) and (max-width:959px)">
+    
+    <!--  데스크탑 : device-width가 960px 이상일경우  -->    
+    <link rel="stylesheet" href="desktop.css" media="screen and (min-width:960px)">
+    
+    <!-- 프린터 : device-width가 960px 이상일경우  -->    
+    <link rel="stylesheet" href="print.css" media="print">    
+    
+    <!-- 모든기기  -->    
+    <link rel="stylesheet" href="all.css" media="all">
+    
+    
+    <!-- 폰트 연결  -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Noto+Sans+KR" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo" rel="stylesheet">
+    
+    
+    <!--  css 파일 연결  -->
+    <link rel="stylesheet" href="reset.css">
+    
+    <link rel="stylesheet" href="sub7.css">
+    
+    
+    <!--  스크립트 연결  -->
+    <script src="js/jquery-1.11.1.js"></script>
+    
+    
+    <script type="text/javascript">
+    
+    $(function(){
+       $(".subM li").click(function(){
+           $(".sub").removeClass("on")
+           $(this).addClass("on")
+       }) 
+        
+        $(".dep").click(function(){
+           $(".dep").removeClass("select")
+           $(this).addClass("select")
+           $(".subM li").eq(0).addClass("on")
+       }) 
+        
+        
+        $(".flow").click(function(){
+           $(".flow").removeClass("on")
+           $(this).addClass("on")
+       }) 
+        
+        $(".flowBtn li").eq(0).click(function(){
+           $(".flowShow").removeClass("on")
+           $("#flow1").addClass("on")
+            
+       })
+       
+        $(".flowBtn li").eq(1).click(function(){
+           $(".flowShow").removeClass("on")
+           $("#flow2").addClass("on")
+            
+       })
+        
+        $(".flowBtn li").eq(2).click(function(){
+           $(".flowShow").removeClass("on")
+           $("#flow3").addClass("on")
+            
+       })
+        
+         $(".flowBtn li").eq(3).click(function(){
+           $(".flowShow").removeClass("on")
+           $("#flow4").addClass("on")
+            
+       })
+        
+        $(".flowBtn li").eq(4).click(function(){
+           $(".flowShow").removeClass("on")
+           $("#flow5").addClass("on")
+            
+       })
+        
+        $(".flowBtn li").eq(5).click(function(){
+           $(".flowShow").removeClass("on")
+           $("#flow6").addClass("on")
+            
+       })
+        
+        $(".flowBtn li").eq(6).click(function(){
+           $(".flowShow").removeClass("on")
+           $("#flow7").addClass("on")
+            
+       })
+        
+        $(".flowBtn li").eq(7).click(function(){
+           $(".flowShow").removeClass("on")
+           $("#flow8").addClass("on")
+            
+       })
+        
+         $(".flowBtn li").eq(8).click(function(){
+           $(".flowShow").removeClass("on")
+           $("#flow9").addClass("on")
+            
+       })
+        
+        $(".flowBtn li").eq(9).click(function(){
+           $(".flowShow").removeClass("on")
+           $("#flow10").addClass("on")
+            
+       })
+        
+        
+    });
+        
+    </script>
+    
+    
+</head>
+<body>
+   
+   <div class="pgWrap">
+       
+       
+       <header class="hd">
+      
+      <div class="hdWrap">
+         
+         <h1 class="logo">
+            <a href="index.html">로고</a>
+         </h1>
+         
+         <nav id="gnb">
+             <ul class="mainGnb">
+                 <li>
+                     <a href="sub1.html">로그인</a>
+                 </li>
+                 
+                 <li>
+                     <a href="sub1.html">나의천안</a>
+                 </li>
+                 
+                 <li>
+                    <a href="sub1.html">전자우편</a>
+                 </li>
+                 
+                 <li>
+                     <a href="sub4.html">천안소개</a>
+                 </li>
+                 
+                 <li>
+                     <a href="sub5.html">시민참여</a>
+                 </li>
+                 
+                 <li>
+                     <a href="sub6.html">부서안내</a>
+                 </li>
+                 
+                 <li>
+                    <a href="sub7.html">청사안내</a>
+                 </li>
+                 
+                 
+             </ul>
+             
+
+             <ul class="subGnb">
+                 <li>
+                     <a href="#">천안소식</a>
+                 </li>
+                 
+                 <li>
+                     <a href="#">응답소</a>
+                 </li>
+                 
+                 <li>
+                     <a href="#">정보공개</a>
+                 </li>
+                 
+                 <li>
+                     <a href="#">분야정보</a>
+                 </li>
+             </ul>
+             
+             
+         </nav>
+          
+          
+      </div>
+       
+   </header>
+       
+       
+        <div class="search">
+       <div class="searchWrap">
+           
+           <h1 class="sLogo">
+               <a href="">서브로고</a>
+           </h1>
+           
+           <div class="searchBox">
+              
+               <input type="text" class="searchBoxin" placeholder="검색어를 입력해주세요.">
+              
+               <div class="searchBtn">
+                   
+               </div> 
+           </div>
+           
+           
+           
+           
+           
+       </div>
+   </div>
+      
+      
+      
+      <div class="content">
+          
+          
+          <div class="subMenu">
+          
+          <h1 class="subTit">
+              천안소개
+          </h1>
+          
+          <nav id="lnb">
+             
+              
+              <ul class="lnbAll">
+                  <li class="on">
+                     <input type="radio" id="menu1" class="subck  menu01" name="menuck" checked>
+                      <label for="menu1" name="menu" class="dep down select"> 시청안내
+                     </label>
+                          <ul class="subM">
+                              <li class="sub">
+                                  <a href="sub6.html">조직도</a>
+                              </li>
+                              <li class="sub">
+                                  <a href="#">본부·사업소</a>
+                              </li>
+                              <li class="sub">
+                                  <a href="#">공사·출연기관</a>
+                              </li>
+                              <li class="sub">
+                                  <a href="#">자치구</a>
+                              </li>
+                              <li class="sub on">
+                                  <a href="sub7.html">청사안내</a>
+                              </li >
+                               <li class="sub">
+                                  <a href="#">찾아오시는길</a>
+                              </li>
+                          </ul>
+                  </li>
+                  
+                  <li>
+                     <input type="radio" id="menu2" class="subck  menu02" name="menuck">
+                      <label for="menu2" name="menu" class="dep down">
+                      천안의 상징 
+                     </label>
+                      <ul class="subM">
+                              <li class="sub on">
+                                  <a href="#">휘장</a>
+                              </li>
+                              <li class="sub">
+                                  <a href="#">마스코트</a>
+                              </li>
+                              <li class="sub">
+                                  <a href="#">심벌</a>
+                              </li>
+                              <li class="sub">
+                                  <a href="#">꽃·나무·새</a>
+                              </li>
+                          </ul>
+                  </li>
+                  
+                  <li>
+                     <input type="radio" id="menu3" class="subck  menu03" name="menuck">
+                      <label for="menu3" name="menu" class="dep down">
+                      천안역사
+                     </label>
+                      <ul class="subM">
+                              <li class="sub on">
+                                  <a href="#">천안의 역사</a>
+                              </li>
+                              <li class="sub">
+                                  <a href="#">역대천안시장</a>
+                              </li>
+                              <li class="sub">
+                                  <a href="#">역대천안군수</a>
+                              </li>
+                          </ul>
+                  </li>
+                  
+                  <li>
+                    <input type="radio" id="menu4" class="subck  menu04" name="menuck">
+                     <label for="menu4" name="menu" class="dep down">
+                      천안정보
+                     </label>
+                      <ul class="subM">
+                              <li class="sub on">
+                                  <a href="#">천안정보</a>
+                              </li>
+                              <li class="sub">
+                                  <a href="#">연혁</a>
+                              </li>
+                              <li class="sub">
+                                  <a href="#">위치/지형지세</a>
+                              </li>
+                              <li class="sub">
+                                  <a href="#">행정구역</a>
+                              </li>
+                          </ul>
+                  </li>
+                  
+                  <li>
+                    <input type="radio" id="menu5" class="subck menu05" name="menuck">
+                     <label for="menu5" name="menu" class="dep down">
+                     천안자랑
+                     </label>
+                     
+                      <ul class="subM">
+                              <li class="sub on">
+                                  <a href="#">우리시자랑거리</a>
+                              </li>
+                              <li class="sub">
+                                  <a href="#">천연기념물</a>
+                              </li>
+                          </ul>
+                  </li>
+                  
+                  <li>
+                      <a href="#" class="dep">문화관광</a>
+                  </li>
+                  
+                  <li>
+                      <a href="#" class="dep">미디어소통센터</a>
+                  </li>
+              </ul>
+        
+              
+              </nav>
+             
+          
+          
+      </div>
+         
+         
+         
+         
+    
+        <div class="subContent">
+            
+            <h1 class="subConTit">
+                청사안내
+            </h1>
+            
+             <button class="printBtn">
+                 
+             </button>
+            
+            <div class="bc">
+                <p>HOME > 천안소개 > 시청안내 > 청사안내</p>
+            </div>
+            
+           
+           
+           
+           <div class="contentWrap">
+              
+              
+            <div class="chungsaImg">
+                
+            </div>
+             
+            <div class="flowBox">
+               
+                <ul class="flowBtn">
+                   
+                    <li>
+                        <a href="#flow1" class="flow on">1F</a>
+                    </li>
+                    <li>
+                        <a href="#flow2" class="flow ">2F</a>
+                    </li>
+                    <li>
+                        <a href="#flow3" class="flow ">3F</a>
+                    </li>
+                    <li>
+                        <a href="#flow4" class="flow ">4F</a>
+                    </li>
+                    <li>
+                        <a href="#flow5" class="flow ">5F</a>
+                    </li>
+                    <li>
+                        <a href="#flow6" class="flow ">6F</a>
+                    </li>
+                    <li>
+                        <a href="#flow7" class="flow ">7F</a>
+                    </li>
+                    <li>
+                        <a href="#flow8" class="flow ">8F</a>
+                    </li>
+                    <li>
+                        <a href="#flow9" class="flow ">9F</a>
+                    </li>
+                    <li>
+                        <a href="#flow10" class="flow ">10F</a>
+                    </li>
+                   
+                        
+                </ul>
+                
+                
+            <div id="flow1" class="flowShow on">
+                   
+                <table cellspacing="0" class="flowInfo">
+
+                    <tr>
+                        <td rowspan='2' class="nflow">1층</td>
+                        <td class="flowObj">배치부서</td>
+                        <td class="place">주요공간</td>
+                    </tr>
+
+                    <tr>
+                        <td class="flowObjIn">허가과, 자치민원과, 복지정책과, 노인장애인과</td>
+                        <td class="placeIn"> </td>
+                    </tr>
+
+                </table> 
+                 
+                <div class="flowImg1">
+                    
+                </div>
+            
+                
+            </div>
+               
+            
+             <div id="flow2" class="flowShow">
+                   
+                <table cellspacing="0" class="flowInfo">
+
+                    <tr>
+                        <td rowspan='2' class="nflow">2층</td>
+                        <td class="flowObj">배치부서</td>
+                        <td class="place">주요공간</td>
+                    </tr>
+
+                    <tr>
+                        <td class="flowObjIn">교육청소년과, 청소행정과</td>
+                        <td class="placeIn"> 도솔도서관, 국제교류관, 소회의실Ⅱ</td>
+                    </tr>
+
+                </table> 
+                 
+                <div class="flowImg2">
+                    
+                </div>
+            
+                
+            </div>  
+               
+                   
+             <div id="flow3" class="flowShow">
+                   
+                <table cellspacing="0" class="flowInfo">
+
+                    <tr>
+                        <td rowspan='2' class="nflow">3층</td>
+                        <td class="flowObj">배치부서</td>
+                        <td class="place">주요공간</td>
+                    </tr>
+
+                    <tr>
+                        <td class="flowObjIn">여성가족과, 대회의실</td>
+                        <td class="placeIn">중앙 휴게실</td>
+                    </tr>
+
+                </table> 
+                 
+                <div class="flowImg3">
+                    
+                </div>
+            
+                
+            </div> 
+               
+                  
+             <div id="flow4" class="flowShow">
+                   
+                <table cellspacing="0" class="flowInfo">
+
+                    <tr>
+                        <td rowspan='2' class="nflow">4층</td>
+                        <td class="flowObj">배치부서</td>
+                        <td class="place">주요공간</td>
+                    </tr>
+
+                    <tr>
+                        <td class="flowObjIn">감사관, 정보통신과</td>
+                        <td class="placeIn">소회의실Ⅲ</td>
+                    </tr>
+
+                </table> 
+                 
+                <div class="flowImg4">
+                    
+                </div>
+            
+                
+            </div>  
+               
+                
+             <div id="flow5" class="flowShow">
+                   
+                <table cellspacing="0" class="flowInfo">
+
+                    <tr>
+                        <td rowspan='2' class="nflow">5층</td>
+                        <td class="flowObj">배치부서</td>
+                        <td class="place">주요공간</td>
+                    </tr>
+
+                    <tr>
+                        <td class="flowObjIn">일자리경제과, 기업지원과, 농업정책과, 축산과, 환경정책과</td>
+                        <td class="placeIn"></td>
+                    </tr>
+
+                </table> 
+                 
+                <div class="flowImg5">
+                    
+                </div>
+            
+                
+            </div> 
+               
+               
+            
+             <div id="flow6" class="flowShow">
+                   
+                <table cellspacing="0" class="flowInfo">
+
+                    <tr>
+                        <td rowspan='2' class="nflow">6층</td>
+                        <td class="flowObj">배치부서</td>
+                        <td class="place">주요공간</td>
+                    </tr>
+
+                    <tr>
+                        <td class="flowObjIn">행정지원과, 자치민원과, 세정과, 회계과</td>
+                        <td class="placeIn"> </td>
+                    </tr>
+
+                </table> 
+                 
+                <div class="flowImg6">
+                    
+                </div>
+            
+                
+            </div>
+               
+               
+             <div id="flow7" class="flowShow">
+                   
+                <table cellspacing="0" class="flowInfo">
+
+                    <tr>
+                        <td rowspan='2' class="nflow">7층</td>
+                        <td class="flowObj">배치부서</td>
+                        <td class="place">주요공간</td>
+                    </tr>
+
+                    <tr>
+                        <td class="flowObjIn">미래전략산업과,
+                        시장실, 부시장실, 직소민원실</td>
+                        <td class="placeIn"> 소회의실Ⅰ, 영상회의실, 상황실</td>
+                    </tr>
+
+                </table> 
+                 
+                <div class="flowImg7">
+                    
+                </div>
+            
+                
+            </div>
+               
+               
+               
+             <div id="flow8" class="flowShow">
+                   
+                <table cellspacing="0" class="flowInfo">
+
+                    <tr>
+                        <td rowspan='2' class="nflow">8층</td>
+                        <td class="flowObj">배치부서</td>
+                        <td class="place">주요공간</td>
+                    </tr>
+
+                    <tr>
+                        <td class="flowObjIn">홍보담당관, 정책기획과, 예산법무과, 식품안전과</td>
+                        <td class="placeIn"> </td>
+                    </tr>
+
+                </table> 
+                 
+                <div class="flowImg8">
+                    
+                </div>
+            
+                
+            </div>
+               
+            
+            <div id="flow9" class="flowShow">
+                   
+                <table cellspacing="0" class="flowInfo">
+
+                    <tr>
+                        <td rowspan='2' class="nflow">9층</td>
+                        <td class="flowObj">배치부서</td>
+                        <td class="place">주요공간</td>
+                    </tr>
+
+                    <tr>
+                        <td class="flowObjIn">안전총괄과, 건설도로과, 도시계획과</td>
+                        <td class="placeIn"> </td>
+                    </tr>
+
+                </table> 
+                 
+                <div class="flowImg9">
+                    
+                </div>
+            
+                
+            </div>
+               
+            
+            <div id="flow10" class="flowShow">
+                   
+                <table cellspacing="0" class="flowInfo">
+
+                    <tr>
+                        <td rowspan='2' class="nflow">10층</td>
+                        <td class="flowObj">배치부서</td>
+                        <td class="place">주요공간</td>
+                    </tr>
+
+                    <tr>
+                        <td class="flowObjIn">체육진흥과, 산림휴양과, 도시재생과, 교통정책과, 대중교통과</td>
+                        <td class="placeIn"> </td>
+                    </tr>
+
+                </table> 
+                 
+                <div class="flowImg10">
+                    
+                </div>
+            
+                
+            </div>
+                
+                
+                
+                
+                
+            </div>
+              
+              
+               
+           </div>
+            
+          
+          
+          
+      </div>
+       
+    
+            
+                               
+                                       
+   <footer class="ft">
+      
+      <div class="ftWrap1">
+         
+         <ul class="linkBox">
+             <li>
+                 <a href="">홈페이지 도우미</a>
+             </li>
+             
+             <li>
+                 <a href="">개인정보처리방침</a>
+             </li>
+             
+             <li>
+                 <a href="">저작권 정책</a>
+             </li>
+             
+             <li>
+                 <a href="">찾아오시는길</a>
+             </li>
+             
+             <li>
+                 <a href="">사이트맵</a>
+             </li>
+         </ul>
+         
+         <ul class="snsBox">
+             <li class="snsIcon fb">
+                 <a href=""></a>
+             </li>
+             <li class="snsIcon blog">
+                 <a href=""></a>
+             </li>
+             <li class="snsIcon kakao">
+                 <a href=""></a>
+             </li>
+             <li class="snsIcon youtube">
+                 <a href=""></a>
+             </li>
+             <li class="snsIcon twitter">
+                 <a href=""></a>
+             </li>
+             <li class="snsIcon instar">
+                 <a href=""></a>
+             </li>
+         </ul>
+          
+      </div>
+      
+      <div class="ftWrap2">
+         
+         <p class="ftcon">
+             본 웹사이트에 게시된 이메일 주소가 자동수집되는 것을 거부하며, 위반시 "정보통신망법"에 의해 처벌됨을 유념하시기 바랍니다.<br>(31162) 충남 천안시 서북구 번영로 156 / 천안시 콜센터 : 1577-3900<br>Copyrightⓒ Cheonan-Si. All rights reserved.
+         </p>
+          
+          <div class="ftImg">
+              <img src="img/gcs.png" alt="" width="120px" height="40px">
+              <img src="img/mk.png" alt=""
+              width="100px" height="60px">
+          </div>
+          
+      </div>
+      
+  </footer>    
+       
+       
+   </div>
+</div>
+    
+</body>
+</html>

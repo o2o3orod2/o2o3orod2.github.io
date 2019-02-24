@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>메뉴연습1</title>
+    
+    <style>
+        *{margin:0px; padding:0px; }
+        ul{list-style: none;}
+        a{text-decoration: none;}
+        
+        
+        
+        .hd{width:1200px; height: 100px; margin:0 auto;
+            position: relative;}
+        
+        .logo{width:200px; height: 40px; float:left;}
+        .logo a{display: block; width:200px; height: 40px; background-color:#ddd; text-indent: -9999px; margin-top:30px; line-height: 100px;}
+        
+        #gnb{display: block; float:right; margin-top:30px; border:1px solid #ccc; text-align: center;}
+        #gnb li{float:left; display: block; width:200px; height: 40px; line-height: 40px; text-align: center;
+                }
+        #gnb .dep {display: block; width:200px; height: 40px; border-left:1px solid #ccc; box-sizing: border-box;}
+        #gnb .dep.first{border-left:0px;}
+        
+        .sub{width:200px; height: 160px; border-left:1px solid #ccc; box-sizing: border-box; border-bottom: 1px solid #ccc;}
+        .sub.last{border-right:1px solid #ccc;}
+        .sub li{clear: both; display: block; width:200px; height: 40px; line-height: 40px; text-align: center;}
+        
+        #gnb li:hover .dep{ background:#333; color:#fff;}
+        
+        #gnb li .sub{display: none;}
+        #gnb:hover li .sub{display: block;}
+        
+        #gnb li .sub li a{display: block; width:200px; height: 40px;}
+        #gnb li .sub li a:hover{background-color:#333; color:#fff;}
+        
+    </style>
+    
+    
+    
+</head>
+<body>
+    
+    <header class="hd">
+    
+      <h2 class="logo">
+          <a href="#">logo</a>
+      </h2>
+       
+     <nav id="gnb">
+         
+         <ul>
+             <li>
+                 <a href="#" class="dep first">메뉴1</a>
+                 <ul class="sub">
+                     <li>
+                         <a href="#">서브1</a>
+                     </li>
+                     <li>
+                         <a href="#">서브2</a>
+                     </li>
+                     <li>
+                         <a href="#">서브3</a>
+                     </li>
+                     <li>
+                         <a href="#">서브4</a>
+                     </li>
+                 </ul>
+             </li>
+             
+             <li>
+                 <a href="#" class="dep">메뉴2</a>
+                 <ul class="sub">
+                     <li>
+                         <a href="#">서브1</a>
+                     </li>
+                     <li>
+                         <a href="#">서브2</a>
+                     </li>
+                     <li>
+                         <a href="#">서브3</a>
+                     </li>
+                     <li>
+                         <a href="#">서브4</a>
+                     </li>
+                 </ul>
+             </li>
+             
+             <li>
+                 <a href="#" class="dep">메뉴3</a>
+                 <ul class="sub">
+                     <li>
+                         <a href="#">서브1</a>
+                     </li>
+                     <li>
+                         <a href="#">서브2</a>
+                     </li>
+                     <li>
+                         <a href="#">서브3</a>
+                     </li>
+                     <li>
+                         <a href="#">서브4</a>
+                     </li>
+                 </ul>
+             </li>
+             
+             <li>
+                 <a href="#" class="dep">메뉴4</a>
+                 <ul class="sub last">
+                     <li>
+                         <a href="#">서브1</a>
+                     </li>
+                     <li>
+                         <a href="#">서브2</a>
+                     </li>
+                     <li>
+                         <a href="#">서브3</a>
+                     </li>
+                     <li>
+                         <a href="#">서브4</a>
+                     </li>
+                 </ul>
+             </li>
+         </ul>
+         
+         
+     </nav>  
+        
+    </header>
+</body>
+</html>

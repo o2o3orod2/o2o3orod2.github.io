@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>행복도시 천안</title>
+    
+     <title>행복도시 천안</title>
+    
+    <!-- 1 . 파비콘   -->
+    
+    <!-- 구형 브라우저   -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon/favicon16.ico">
+    
+    <!--  신형 브라우저와 안드로이드폰  -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon/favicon32.png">
+    
+    <!-- 아이폰3 이하  -->
+    <link rel="apple-touch-icon" size="57x57" href="img/favicon/favicon57.png">
+    
+    <!--  아이패드  -->
+    <link rel="apple-touch-icon" size="64X64" href="img/favicon/favicon64.png">
+    
+    <!--  아이폰4 이상  -->
+    <link rel="apple-touch-icon" size="114x114" href="img/favicon/favicon128.png">
+    
+    <!--  IE10 이상  -->
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="img/favicon/favicon144.png">
+    
+    
+    <!-- 2. 메타데이터 개발 공통사항 (html 문서 정보)  -->
+    
+    <!--  기본 실행할 스타일 시트 지정  -->
+    <meta http-equiv="default-style" content="phone">
+    <link rel="stylesheet" href="phone.css" title="phone">
+    <link rel="stylesheet" href="desktop.css" title="desktop">
+    
+    <!--  자동 새로고침 설정  -->
+    <meta http-equiv="refresh" content="180"> <!--    3분마다 새로고침 --> 
+
+    <!--  데스크탑에서 IE로 웹 문서를 열때 가장 최신 버전으로 실행 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    
+    
+    <!--  앱(웹사이트) 이름  -->
+    <meta name="application-name" content="천안시청 홈페이지">
+    
+    <!-- 웹사이트 저작자  -->
+    <meta name="author" content="yeo kyunghee">
+    
+    <!-- 현재 문서의 설명   -->
+    <meta name="description" content="천안시청 홈페이지 main page">
+    
+    <!-- 현재 문서의 저작 도구  -->
+    <meta name="description" content="Brakets">
+    
+    <!-- 검색 엔진에서 검색되게 할 키워드  -->
+    <meta name="keywords" content="천안시, 천안, 천안시청, 천안시청홈페이지, 천안홈페이지, 천안시홈페이지">
+    
+    
+    
+    
+    <!--반응형, 모바일, 태블릿 사이트일 경우 뷰포트 설정 (디바이스 크기에 맞춰라, 배율은 1:1, 핀치 작동은 no )-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    
+    
+    
+    
+    <!--  모바일 : device-width가 767px 이하일경우  -->
+    <link rel="stylesheet" href="mobil.css" media="screen and (max-width:767px)">
+    
+    <!--  태블릿 : device-width가 768px이상~ 959px 이하일경우  -->
+    <link rel="stylesheet" href="tablet.css" media="screen and (min-width:768px) and (max-width:959px)">
+    
+    <!--  데스크탑 : device-width가 960px 이상일경우  -->    
+    <link rel="stylesheet" href="desktop.css" media="screen and (min-width:960px)">
+    
+    <!-- 프린터 : device-width가 960px 이상일경우  -->    
+    <link rel="stylesheet" href="print.css" media="print">    
+    
+    <!-- 모든기기  -->    
+    <link rel="stylesheet" href="all.css" media="all">
+    
+    
+    <!-- 폰트 연결  -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Noto+Sans+KR" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo" rel="stylesheet">
+    
+    
+    <!--  css 파일 연결  -->
+    <link rel="stylesheet" href="reset.css">
+    
+    <link rel="stylesheet" href="sub6.css">
+    
+    
+    <!--  스크립트 연결  -->
+    <script src="js/jquery-1.11.1.js"></script>
+    
+    
+    <script type="text/javascript">
+    
+    $(function(){
+       $(".subM li").click(function(){
+           $(".sub").removeClass("on")
+           $(this).addClass("on")
+       }) 
+        
+        $(".dep").click(function(){
+           $(".dep").removeClass("select")
+           $(this).addClass("select")
+           $(".subM li").eq(0).addClass("on")
+       }) 
+    });
+        
+    </script>
+    
+    
+</head>
+<body>
+   
+   <div class="pgWrap">
+       
+       
+       <header class="hd">
+      
+      <div class="hdWrap">
+         
+         <h1 class="logo">
+            <a href="index.html">로고</a>
+         </h1>
+         
+         <nav id="gnb">
+             <ul class="mainGnb">
+                 <li>
+                     <a href="sub1.html">로그인</a>
+                 </li>
+                 
+                 <li>
+                     <a href="sub1.html">나의천안</a>
+                 </li>
+                 
+                 <li>
+                    <a href="sub1.html">전자우편</a>
+                 </li>
+                 
+                 <li>
+                     <a href="sub4.html">천안소개</a>
+                 </li>
+                 
+                 <li>
+                     <a href="sub5.html">시민참여</a>
+                 </li>
+                 
+                 <li>
+                     <a href="sub6.html">부서안내</a>
+                 </li>
+                 
+                 <li>
+                    <a href="sub7.html">청사안내</a>
+                 </li>
+                 
+                 
+             </ul>
+             
+
+             <ul class="subGnb">
+                 <li>
+                     <a href="#">천안소식</a>
+                 </li>
+                 
+                 <li>
+                     <a href="#">응답소</a>
+                 </li>
+                 
+                 <li>
+                     <a href="#">정보공개</a>
+                 </li>
+                 
+                 <li>
+                     <a href="#">분야정보</a>
+                 </li>
+             </ul>
+             
+             
+         </nav>
+          
+          
+      </div>
+       
+   </header>
+       
+       
+        <div class="search">
+       <div class="searchWrap">
+           
+           <h1 class="sLogo">
+               <a href="">서브로고</a>
+           </h1>
+           
+           <div class="searchBox">
+              
+               <input type="text" class="searchBoxin" placeholder="검색어를 입력해주세요.">
+              
+               <div class="searchBtn">
+                   
+               </div> 
+           </div>
+           
+           
+           
+           
+           
+       </div>
+   </div>
+      
+      
+      
+      <div class="content">
+          
+          
+          <div class="subMenu">
+          
+          <h1 class="subTit">
+              천안소개
+          </h1>
+          
+          <nav id="lnb">
+             
+              
+              <ul class="lnbAll">
+                  <li class="on">
+                     <input type="radio" id="menu1" class="subck  menu01" name="menuck" checked>
+                      <label for="menu1" name="menu" class="dep down select"> 시청안내
+                     </label>
+                          <ul class="subM">
+                              <li class="sub on">
+                                  <a href="sub6.html">조직도</a>
+                              </li>
+                              <li class="sub">
+                                  <a href="#">본부·사업소</a>
+                              </li>
+                              <li class="sub">
+                                  <a href="#">공사·출연기관</a>
+                              </li>
+                              <li class="sub">
+                                  <a href="#">자치구</a>
+                              </li>
+                              <li class="sub">
+                                  <a href="sub7.html">청사안내</a>
+                              </li >
+                               <li class="sub">
+                                  <a href="#">찾아오시는길</a>
+                              </li>
+                          </ul>
+                  </li>
+                  
+                  <li>
+                     <input type="radio" id="menu2" class="subck  menu02" name="menuck">
+                      <label for="menu2" name="menu" class="dep down">
+                      천안의 상징 
+                     </label>
+                      <ul class="subM">
+                              <li class="sub on">
+                                  <a href="#">휘장</a>
+                              </li>
+                              <li class="sub">
+                                  <a href="#">마스코트</a>
+                              </li>
+                              <li class="sub">
+                                  <a href="#">심벌</a>
+                              </li>
+                              <li class="sub">
+                                  <a href="#">꽃·나무·새</a>
+                              </li>
+                          </ul>
+                  </li>
+                  
+                  <li>
+                     <input type="radio" id="menu3" class="subck  menu03" name="menuck">
+                      <label for="menu3" name="menu" class="dep down">
+                      천안역사
+                     </label>
+                      <ul class="subM">
+                              <li class="sub on">
+                                  <a href="#">천안의 역사</a>
+                              </li>
+                              <li class="sub">
+                                  <a href="#">역대천안시장</a>
+                              </li>
+                              <li class="sub">
+                                  <a href="#">역대천안군수</a>
+                              </li>
+                          </ul>
+                  </li>
+                  
+                  <li>
+                    <input type="radio" id="menu4" class="subck  menu04" name="menuck">
+                     <label for="menu4" name="menu" class="dep down">
+                      천안정보
+                     </label>
+                      <ul class="subM">
+                              <li class="sub on">
+                                  <a href="#">천안정보</a>
+                              </li>
+                              <li class="sub">
+                                  <a href="#">연혁</a>
+                              </li>
+                              <li class="sub">
+                                  <a href="#">위치/지형지세</a>
+                              </li>
+                              <li class="sub">
+                                  <a href="#">행정구역</a>
+                              </li>
+                          </ul>
+                  </li>
+                  
+                  <li>
+                    <input type="radio" id="menu5" class="subck menu05" name="menuck">
+                     <label for="menu5" name="menu" class="dep down">
+                     천안자랑
+                     </label>
+                     
+                      <ul class="subM">
+                              <li class="sub on">
+                                  <a href="#">우리시자랑거리</a>
+                              </li>
+                              <li class="sub">
+                                  <a href="#">천연기념물</a>
+                              </li>
+                          </ul>
+                  </li>
+                  
+                  <li>
+                      <a href="#" class="dep">문화관광</a>
+                  </li>
+                  
+                  <li>
+                      <a href="#" class="dep">미디어소통센터</a>
+                  </li>
+              </ul>
+        
+              
+              </nav>
+             
+          
+           
+      </div>
+         
+         
+         
+         
+    
+        <div class="subContent">
+            
+            <h1 class="subConTit">
+                조직도
+            </h1>
+            
+             <button class="printBtn">
+                 
+             </button>
+            
+            <div class="bc">
+                <p>HOME > 천안소개 > 시청안내 > 조직도</p>
+            </div>
+            
+           
+           
+           
+           <div class="contentWrap">
+              
+              
+              <div class="pSearchBox">
+                 
+                    <ul class=pSearchWrap>
+                        <li class="psTit">
+                            <p><span>업무직원</span>검색</p>
+                        </li>
+                        <li class="psSelect">
+                            <select name="people" id="people" class="psSelectBox">
+                                <option value="부서명">부서명</option>
+                                <option value="담당업무">담당업무</option>
+                                <option value="직원">직원</option>
+                                <option value="전화번호">전화번호</option>
+                            </select>
+                        </li>
+                        <li class="psTxt">
+                            <input type="text" class="psTxtBox" placeholder="직원이나 업무명을 입력하세요.">
+                        </li>
+                        <li class="psBtn">
+                            <button>검색</button>
+                        </li>
+                    </ul>
+
+                  
+                  
+              </div>
+              
+              
+              
+              <div class="team">
+                  
+                  
+                  <ul class="teamTop">
+                     
+                     <li class="cell peo">시민</li>
+                     <li class="cell my">천안시장</li>
+                     
+                     <li class="cell dea">대변인</li>
+                     <li class="cell sea">시민소통기획관</li>
+                     <li class="cell om">시민감사옴부즈만위원회</li>
+                     
+                     <li class="cell cheon">천안혁신기관</li>
+                     <li class="cell cheong">청년청</li>
+                     <li class="cell kam">감사위원회</li>
+                     
+                     <li class="cell hang1">행정1부시장</li>
+                     <li class="cell hang2">행정2부시장</li>
+                     <li class="cell jeong">정무부시장</li>
+                     
+                     <li class="cell yeo">여성가족정책실</li>
+                     <li class="cell bea">비상기획관</li>
+                     <li class="cell nam">남북협력추진단</li>
+                      
+                     <li class="cell no">노동민생정책관</li>
+                     <li class="cell smart">스마트도시정책관</li>
+                     <li class="cell mean">민생사법경찰단</li>
+                      
+                     <li class="cell do">도시공간개선단</li>
+                     <li class="cell gong">공공개발기획단</li>
+                     <li class="cell ki">기술심사담당관</li>
+                       
+                     <li class="cell in">인권담당관</li>  
+                      
+                      
+                     <li class="cell kea">기획조정실</li> 
+                     
+                     
+                    <li class="cell kyung">경제정책실</li>
+                    <li class="cell bok">복지정책실</li>
+                    <li class="cell dosi">도시교통실</li>
+                    <li class="cell moon">문화본부</li>
+                    <li class="cell kihoo">기후환경본부</li>
+                    <li class="cell hangjeong">행정국</li>
+                    <li class="cell jae">재무국</li>
+                    <li class="cell pyung">평생교육국</li>
+                    <li class="cell kwan">관광체육국</li>
+                    <li class="cell seamin">시민건강국</li>
+                    
+                               
+                    <li class="cell an">안전총괄실</li>
+                    <li class="cell jaesang">도시재생실</li>
+                    <li class="cell cityplan">도시계획국</li>
+                    <li class="cell zoo">주택건축본부</li>
+                    <li class="cell poo">푸른도시국</li>
+                    <li class="cell water">물순환안전국</li>
+                    <li class="cell jea">지역발전본부</li>
+                    <li class="cell sobang">소방재난본부</li>           
+                      
+                      
+                       
+                  </ul>
+                  
+                  
+                  
+                  
+                  
+              </div>
+              
+              
+               
+           </div>
+            
+          
+          
+          
+      </div>
+       
+    
+            
+                               
+                                       
+   <footer class="ft">
+      
+      <div class="ftWrap1">
+         
+         <ul class="linkBox">
+             <li>
+                 <a href="">홈페이지 도우미</a>
+             </li>
+             
+             <li>
+                 <a href="">개인정보처리방침</a>
+             </li>
+             
+             <li>
+                 <a href="">저작권 정책</a>
+             </li>
+             
+             <li>
+                 <a href="">찾아오시는길</a>
+             </li>
+             
+             <li>
+                 <a href="">사이트맵</a>
+             </li>
+         </ul>
+         
+         <ul class="snsBox">
+             <li class="snsIcon fb">
+                 <a href=""></a>
+             </li>
+             <li class="snsIcon blog">
+                 <a href=""></a>
+             </li>
+             <li class="snsIcon kakao">
+                 <a href=""></a>
+             </li>
+             <li class="snsIcon youtube">
+                 <a href=""></a>
+             </li>
+             <li class="snsIcon twitter">
+                 <a href=""></a>
+             </li>
+             <li class="snsIcon instar">
+                 <a href=""></a>
+             </li>
+         </ul>
+          
+      </div>
+      
+      <div class="ftWrap2">
+         
+         <p class="ftcon">
+             본 웹사이트에 게시된 이메일 주소가 자동수집되는 것을 거부하며, 위반시 "정보통신망법"에 의해 처벌됨을 유념하시기 바랍니다.<br>(31162) 충남 천안시 서북구 번영로 156 / 천안시 콜센터 : 1577-3900<br>Copyrightⓒ Cheonan-Si. All rights reserved.
+         </p>
+          
+          <div class="ftImg">
+              <img src="img/gcs.png" alt="" width="120px" height="40px">
+              <img src="img/mk.png" alt=""
+              width="100px" height="60px">
+          </div>
+          
+      </div>
+      
+  </footer>    
+       
+       
+   </div>
+   
+ </div>
+    
+</body>
+</html>

@@ -1,0 +1,250 @@
+@charset "utf-8";
+
+.pgWrap{width:100%; margin: 0 auto;}
+.content{position: relative;width: 1200px; margin:0 auto;}
+.hd{width:1200px; height: 50px; margin: 0 auto;}
+.hdWrap{display: block; width:100%; height: 50px; line-height: 50px;}
+.logo a{width:150px; height: 50px; background-image:url(img/logo.png); background-repeat: no-repeat;
+background-position: center center; background-size: 80%; float: left; line-height: 70px; text-indent:-9999px;}
+
+
+
+
+/*header*/
+#gnb{width:100%; height: 40px;}
+.mainGnb {display: block; width:60%; height: 50px; line-height: 50px; float: left; margin-left: 60px;}
+.mainGnb li{display: block; float: left; width:80px; height: 50px; text-align: center; line-height: 50px;
+font-weight: 600;}
+.mainGnb li a{text-align: center; color:#333;
+ font-size:16px;}
+
+.subGnb{width:20%; height: 50px; line-height: 50px; float: right;}
+.subGnb li{display: block; float: left; font-size:14px; font-weight: 600; width:60px; height: 20px; text-align: center;}
+.subGnb li a{text-align: center; color:#333;}
+
+
+/*search*/
+
+.search{width:100%; margin: 0 auto; height: 100px; background:#4085e0;}
+.searchWrap{width:1200px; height: 100px; margin: 0 auto; position: relative;}
+
+.sLogo a{display: block; width:246px; height: 59px; background-image:url(img/s_logo2.png); background-repeat:no-repeat;
+background-position: center center; background-size:cover;
+text-indent: -9999px; float: left; margin-top:23px;}
+
+.searchBox{width: 391px; height: 100px; margin:0 auto; position: absolute; left:370px}
+.searchBoxin{width:350px; height: 38px; text-indent: 10px; position: absolute; top:28px; border:3px solid #4085e0; border-right:0px; }
+.searchBtn{content:""; width:38px; height: 38px; background-color:transparent; float:right; position: absolute; top: 28px; right:0px; z-index: 1; background: #fff;
+background-image:url(img/magnifying-glass.png); background-position: center center; background-repeat: no-repeat; background-size:70%; border-top:3px solid #4085e0; border-right: 3px solid #4085e0; border-bottom: 3px solid #4085e0;
+cursor: pointer;
+}
+
+.weather{float:left; width:200px; height: 80px; background-color:#eee; position: absolute; right:0px; bottom:0px;}
+
+.langLstin{display: block; width:100px; height: 20px; position: absolute; top:0px; right:0px; border:1px solid #4085e0; }
+
+
+
+
+/*lnb*/
+
+
+.subMenu{display: block; width:220px; height: 1100px; border-right:1px solid #ddd; float: left;}
+.subTit{width:160px; height: 80px;  margin: 0 auto; text-align: center; font-size:24px; border-bottom: 2px solid #444; line-height: 80px; padding-top:30px;}
+
+#lnb{display: block; width:160px; height: 1000px; margin:15px auto;}
+
+.menu1{display: block; width:160px; height: 50px; z-index: 999;}
+#lnb li a{display: block; width:160px; font-size:14px; text-indent: 10px; height: 50px; line-height: 50px;}
+#lnb li label{display: block; width:160px; font-size:14px; text-indent: 10px; height: 50px; line-height: 50px;}
+
+
+#lnb .dep{position: relative; cursor: pointer;}
+#lnb .down:after{content:""; display: block; width:20px; height: 20px; background-image: url(img/downopenBtn.png); background-repeat: no-repeat; background-position: center center; background-size:cover; position:absolute; top:15px; right:15px;}
+
+.subM{display:block; height: 0px; opacity: 0; visibility: hidden; position: relative; transition: 0.6s; background-color:#f7f7f7;}
+#lnb .lnbAll .subM a{text-indent: 15px;}
+.subck{display: none;}
+
+#lnb li .menu01:checked ~ .subM{display: block; height: 300px; opacity: 1; visibility: visible;}
+#lnb li .menu02:checked ~ .subM{display: block; height: 200px; opacity: 1; visibility: visible;}
+#lnb li .menu03:checked ~ .subM{display: block; height: 150px; opacity: 1; visibility: visible;}
+#lnb li .menu04:checked ~ .subM{display: block; height: 200px; opacity: 1; visibility: visible;}
+#lnb li .menu05:checked ~ .subM{display: block; height: 100px; opacity: 1; visibility: visible;}
+
+
+.subM a{color:#444;}
+.sub.on a{color:#4085e0;}
+.lnbAll li .dep{color:#444;}
+.lnbAll li .dep.select{background-color:#4085e0; color:#fff; font-weight: 100;}
+
+
+/*contetnt*/
+.subContent{width:950px; height: 1200px; margin-left:220px;
+position: relative;}
+
+.subConTit{display: block; width:200px; height: 50px; text-align: center; margin: 0 auto; padding-top:60px; font-weight: 300;}
+
+.printBtn{display: block;width:40px; height: 40px;
+        background-color:transparent; border:0px;
+        background-image: url(img/printbtn.png
+        ); background-position: center center;
+        position: absolute; right:70px; top:60px;
+        cursor: pointer;}
+
+.bc{display: block; width:400px; height: 50px; text-align: center; margin: 0 auto; padding-top:15px; font-weight: 300; color:#444; font-size:14px;}
+
+
+/*contentWrap*/
+
+.contentWrap{width:100%; height: 100%;}
+
+.pSearchBox{width:800px; margin: 0 auto; height: 100px; margin-top:20px; border:1px solid #ddd; background: #f8f8f8;
+line-height: 100px; position: relative;}
+
+.pSearchWrap{width:700px; height: 70px; margin: 0 auto;
+            position: relative;}
+.pSearchWrap li{float:left;}
+.psTit{ width:15%;}
+.psTit p{font-size:14px; text-align: center;}
+.psTit p span{color:#4085e0; font-weight: 500;}
+.psSelect{margin: 0; width:18%; height: 100%;}
+.psSelectBox{width:100%; height: 38px; text-indent: 10px; line-height: 100%; border:1px solid #ccc; color:#666;}
+
+.psTxt{display: block; width:50%; height: 100%; position: relative;}
+.psTxtBox{width:94%; height: 36px; margin: 0; margin-left:10px; line-height: 100%; border:1px solid #ccc; position: absolute; bottom:2px; text-indent: 10px;}
+.psBtn{width:15%; height: 38px;}
+.psBtn button{width:100%; height: 100%; background-color:#4085e0; border:0px; color:#fff; cursor: pointer;}
+
+
+
+
+/*청사안내 영역*/
+
+
+.chungsaImg{width:800px; height: 300px; background-image: url(img/chungsa/chungsa1.png); margin:0 auto; background-position: center center; background-size:80%; background-repeat: no-repeat;}
+
+.flowBox{width:900px; height:61px; margin: 0 auto;}
+.flowBtn{width:804px; height: 100%; margin: 0 auto;
+        border:1px solid #ccc;}
+.flowBtn li:nth-child(-n+5){border-bottom: 1px solid #ccc;}
+.flowBtn li:nth-of-type(n+6){border-bottom: 1px solid #ccc;}
+
+.flowBtn li{float:left; width:160px; height: 30px; line-height: 30px; text-align: center;
+border-right:1px solid #ccc;}
+
+.flowBtn li:nth-child(5){border-right:0px;}
+.flowBtn li:last-child{border-right:0px;}
+
+.flowBtn li a{display: block; width:100%; height: 100%; font-size:14px; color:#444;}
+
+.flowBtn li a.on{background:#4085e0; color:#fff; }
+
+
+.flowInfo, th, td{border-collapse: collapse;}
+
+.flowInfo{width:806px; height:60px; margin: 0 auto; margin-top:20px; font-size:14px;}
+.flowInfo td{border:1px solid #ddd ;}
+.nflow{width:10%; height: 30px; text-align: center;
+        background: #f4f6f7; color:#444;}
+.flowObj{width:60%; height: 30px; text-align: center;
+    background-color:#f4f6f7; color:#444;}
+.place{width:30%; text-align: center;
+    background-color:#f4f6f7; color:#444;}
+.placeIn{font-size:14px; color:#666; text-indent: 10px;}
+
+.flowObjIn{text-indent: 15px; color:#666;}
+
+
+.flowShow{display: none;}
+
+
+#flow1.on{display: block;}
+#flow2.on{display: block;}
+#flow3.on{display: block;}
+#flow4.on{display: block;}
+#flow5.on{display: block;}
+#flow6.on{display: block;}
+#flow7.on{display: block;}
+#flow8.on{display: block;}
+#flow9.on{display: block;}
+#flow10.on{display: block;}
+
+
+.flowImg1{width:600px; height: 500px; margin: 20px auto; background-image: url(img/chungsa/1.jpg); background-repeat: no-repeat; background-size:90%;
+background-position: center center;}
+
+.flowImg2{width:600px; height: 500px; margin: 20px auto; background-image: url(img/chungsa/2.jpg); background-repeat: no-repeat; background-size:90%;
+background-position: center center;}
+
+.flowImg3{width:600px; height: 500px; margin: 20px auto; background-image: url(img/chungsa/3.jpg); background-repeat: no-repeat; background-size:90%;
+background-position: center center;}
+
+.flowImg4{width:600px; height: 500px; margin: 20px auto; background-image: url(img/chungsa/4.jpg); background-repeat: no-repeat; background-size:90%;
+background-position: center center;}
+
+.flowImg5{width:600px; height: 500px; margin: 20px auto; background-image: url(img/chungsa/5.jpg); background-repeat: no-repeat; background-size:90%;
+background-position: center center;}
+
+.flowImg6{width:600px; height: 500px; margin: 20px auto; background-image: url(img/chungsa/6.jpg); background-repeat: no-repeat; background-size:90%;
+background-position: center center;}
+
+.flowImg7{width:600px; height: 500px; margin: 20px auto; background-image: url(img/chungsa/7.jpg); background-repeat: no-repeat; background-size:90%;
+background-position: center center;}
+
+.flowImg8{width:600px; height: 500px; margin: 20px auto; background-image: url(img/chungsa/8.jpg); background-repeat: no-repeat; background-size:90%;
+background-position: center center;}
+
+.flowImg9{width:600px; height: 500px; margin: 20px auto; background-image: url(img/chungsa/9.jpg); background-repeat: no-repeat; background-size:90%;
+background-position: center center;}
+
+.flowImg10{width:600px; height: 500px; margin: 20px auto; background-image: url(img/chungsa/10.jpg); background-repeat: no-repeat; background-size:90%;
+background-position: center center;}
+
+
+
+
+
+
+
+
+/*footer*/
+
+.ft{display: block; width:100%; height: 160px; margin: 0 auto;
+    border-top:1px solid #bbb;}
+.ftWrap1{width:1200px; margin: 0 auto; height: 50px; border-bottom:1px solid #bbb;}
+.ftWrap2{width:1200px; margin: 0 auto;}
+.linkBox li{float: left;}
+.linkBox li a{font-size:12px; line-height: 50px; color:#444;}
+.linkBox li:after{content:"|";padding-left:7px;
+padding-right:7px; color:#aaa; font-size:12px;}
+
+.snsBox{float:right;}
+.snsBox li{float:left; width:24px; height: 24px; margin-top: 13px; margin-right: 10px;}
+.snsBox li a{display: block; width:24px; height: 24px;}
+
+.snsIcon{background-image: url(img/icon/iconset4.png); background-repeat: no-repeat; background-size:cover;}
+
+.snsIcon.fb{background-position:0 0;}
+.snsIcon.blog{background-position:-33px 0;}
+.snsIcon.kakao{background-position:-65px 0;}
+.snsIcon.youtube{background-position:-98px 0;}
+.snsIcon.twitter{background-position:-129px 0;}
+.snsIcon.instar{background-position:-161px 0;}
+
+
+.ftcon{font-size:12px; float: left; color:#555; margin-top:20px;}
+
+.ftImg{float: right; margin-top:12px;}
+.ftImg img:first-child{margin-bottom: 8px; margin-right:20px;}
+
+
+
+
+
+
+
+
+
+
+
