@@ -51,7 +51,16 @@ background-image:url(img/magnifying-glass.png); background-position: center cent
 cursor: pointer;
 }
 
-.weather{float:left; width:200px; height: 80px; background-color:#eee; position: absolute; right:0px; bottom:0px;}
+.weather{float:left; width:200px; height: 80px; position: absolute; right:0px; bottom:0px;}
+
+#weatherPic{float:left;position: relative;}
+#weatherPic img{position: absolute; top:-10px;}
+
+.weatherTit{float: right; margin-right:20px; margin-top:18px; font-size:18px;}
+#weatherTxt{clear:both;position: absolute; right:20px; top:40px;}
+#weatherTxt:before{content:"오늘날씨"; color:#4085e0; font-weight: 600;}
+
+
 
 .langLstin{display: block; width:100px; height: 20px; position: absolute; top:0px; right:0px; border:1px solid #4085e0; }
 
