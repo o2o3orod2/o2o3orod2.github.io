@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HEESMILL</title>
+    <!--  파비콘  -->
+    
+    <link rel="shortcut icon" type="img/x-icon" href="./img/favicon/favicon16.ico">
+    <link rel="shortcut icon" type="img/x-icon" href="./img/favicon/favicon32.png">
+    <link rel="apple-touch-icon" "img/x-icon" href="./img/favicon/favicon57.png">
+    <link rel="apple-touch-icon" "img/x-icon" href="./img/favicon/favicon72.png">
+    <link rel="apple-touch-icon" "img/x-icon" href="./img/favicon/favicon114.png">
+
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImg" content="./img/favicon/favicon114.png">
+    
+    <!-- 앱(웹)사이트 이름   -->
+    <meta name="application-name" content="CAFE HEE'S MILL">
+    
+    <!-- 검색엔진 키워드   -->
+    <meta name="keywords" content="대전커피, 대전카페, 홍차카페, 대전홍차카페">
+    
+    <!--  뷰포트  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    
+    <!--  적응형 미디어 스크립트 연결  -->
+<!--<script src="media.js"></script>-->
+    
+    
+    <!--  폰트 연결  -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Nanum+Myeongjo|Noto+Sans+KR|Noto+Serif+KR" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="reset.css">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    
+    
+    
+     <script>
+        
+        $(document).ready(function(){
+           $(window).scroll(function(){
+              var scTop = $(window).scrollTop();
+               if(scTop>=120){
+                   $(".hdwrap1").not(":animated").slideUp(400);
+                   $(".header").css("position", "fixed").css("height", "80px");
+               } else {
+                   $(".hdwrap1").not(":animated").slideDown(400);
+                   $(".header").css("position", "absolute").css("height", "200px");
+               }
+           }); 
+        });
+        
+    </script>
+    
+    
+    
+    
+    <script>
+        
+        $(document).ready(function(){
+            var wd = $(window).width();
+            var intv = setInterval(function(){nextAni();},5000);
+            
+            function nextAni(){
+                $(".imgBox").not(":animated").animate({"margin-left":-wd+"px"}, 800, function(){
+                   $(".imgBox li").eq(0).appendTo($(".imgBox"));
+                    $(".imgBox").css("margin-left", "0px");
+                    $(".slideBtnFrm li").eq(0).appendTo($(".slideBtnFrm"));
+                    $(".slideBtnFrm li button").removeClass("on");
+                    $(".slideBtnFrm li").eq(0).find("button").addClass("on");
+                });
+            }
+                          
+        });
+        
+        
+    </script>
+    
+    
+   
+   <script>
+       
+       $(document).ready(function(){
+                $("#gnb label").click(function(){
+                   var th = $(this).attr("for");
+                   var thId = "#"+th;
+                   var scObj = $(thId).offset();
+                   var scDist = scObj.top;
+                    $("body, html").not(":animated").animate({"scrollTop":scDist}, 600);
+                    $("#gnb label").removeClass("on");
+                    $(this).addClass("on");
+                });
+        });
+       
+   </script>
+    
+    
+    
+    
+    <style>
+    
+        .header{width:100%; height: 200px; position: absolute; background:#363636;
+                z-index:9999;}
+        .hdwrap1{width:100%; height: 119px; border-bottom: 1px solid #ffc976;}
+        
+        .logo{display: block; width:100%; height: 119px;background-image:url(img/logo.png); background-repeat: no-repeat; background-position:center center; line-height: 119px; text-indent: -9999px;}
+        .hdwrap2{width:1197px; height: 80px; margin:0 auto;}
+        #gnb li{width:171px; height: 80px; line-height: 80px; float:left; color:#ffc976;}
+        #gnb li label{display: block; font-size:14px; text-align: center; cursor: pointer;}
+        
+    
+        
+        /*   슬라이드 영역     */
+        
+        .vs{width:100%; position: relative; overflow: hidden; }
+        .imgBox{width:400%; height: 700px; padding-top:200px; overflow: hidden; position: relative;}
+        .imgBox li{float:left; position: relative;}
+        .imgBox .item1{ display: block; width:25%; height: 700px; background-image:url(img/slide2.png); background-repeat: no-repeat;
+                        background-position: center center; background-size:cover;}
+        .imgBox .item2{ display: block; width:25%; height: 700px; background-image:url(img/slide1.png); background-repeat: no-repeat;
+                        background-position: center center; background-size:cover;}
+        
+        .lrbtnBox{position: absolute; top:200px; width:100%; height: 700px;}
+        .leftFr{position: absolute; width:50px; height: 50px; top:300px; left:200px;}
+        
+        .left{background-color:transparent; width:100%; height: 100%; position: absolute; top:0; background-image:url(img/leftBtn.png); }
+        
+        .rightFr{position: absolute; width:50px; height: 50px; top:300px; right:200px; }
+        
+        .right{background-color:transparent; width:100%; height: 100%; position: absolute; top:0; background-image:url(img/rightBtn.png); }
+        
+        
+        .slidBtn{background-color:transparent; width:20px; height:20px; background-image:url(img/offbtn.png); float:left; margin-right:20px;}
+        .slidBtn.on{background-color:transparent; width:20px; height:20px; background-image:url(img/onbtn.png);}
+        
+        
+        .slideBtnBox{position:absolute; width:100%; height: 30px; bottom:8%;}
+        .slideBtnFrm{width:100px; height: 30px; margin:0 auto;}
+        .iBtn{margin-left:10px;}
+        
+        /*    sub1 영역    */
+        
+        .pg{width:100%; height:  800px; background: #eee; z-index:-1;}
+        
+        /*    sub2 영역    */
+        .backImg2{width:100%; height: 800px; background-image:url(img/sub2back.jpg);
+            background-repeat: no-repeat; background-position: center center;
+             overflow: hidden;}
+        .sub2Tit{display: block;  font-family: 'Noto Sans KR', sans-serif;
+            width:100%; height: 160px; line-height: 160px; text-align: center; color:#fff; font-size:50px; border-bottom: 1px solid #fff; font-weight: 200;}
+        .sub2Com{display: block; width:100%; height: 200px; text-align: center; color:#fff; padding-top:40px; font-size:22px;}
+        .sub2content{width:100%; height: 400px; padding-top:180px;
+                    font-family: 'Noto Sans KR', sans-serif; font-weight: 300;
+                    line-height: 30px;}
+        
+        .down{ width: 50px; height: 50px; background-image: url(img/down.png);
+                background-position: center 3px;
+                margin:0 auto; background-color:rgba(255,255,255, 0.3);
+                border-radius: 25px; margin-top:70px;}
+        
+        /*    sub3 영역    */
+         .backImg3{width:100%; height:  800px; background-image:url(img/sub3back.jpg);
+            background-repeat: no-repeat; background-position: center center;
+             overflow: hidden;}
+        .sub3Tit{display: block;  font-family: 'Noto Sans KR', sans-serif;
+            width:100%; height: 160px; line-height: 160px; text-align: center; color:#fff; font-size:50px; border-bottom: 1px solid #fff; font-weight: 200;}
+        .sub3Com{display: block; width:100%; height: 200px; text-align: center; color:#fff; padding-top:40px; font-size:22px;}
+        .sub3content{width:100%; height: 400px; padding-top:180px;
+                    font-family: 'Noto Sans KR', sans-serif; font-weight: 300;
+                    line-height: 30px;}
+        
+        /*   sub4 영역     */
+        #sub4{position: relative; height:3000px;}
+         .backImg4{width:100%; height: 3200px; background-color:#fff; background-image:url(img/sub4back.jpg);
+            background-repeat: no-repeat; background-position: top;
+             overflow: hidden; display: block; position: relative;}
+        .sub4Tit{display: block;  font-family: 'Noto Sans KR', sans-serif;
+            width:100%; height: 160px; line-height: 160px; text-align: center; color:#fff; font-size:50px; border-bottom: 1px solid #fff; font-weight: 200;}
+        .sub4Com{display: block; width:100%; height: 200px; text-align: center; color:#fff; padding-top:40px; font-size:22px;}
+        .sub4content{width:100%; height: 400px; padding-top:180px;
+                    font-family: 'Noto Sans KR', sans-serif; font-weight: 300;
+                    line-height: 30px;}
+        
+        /*   sub4-1 영역     */
+        
+        .backImg4_1{width:100%; height:800px; background-image:url(img/sub4-1back.jpg);
+            background-repeat: no-repeat; background-position: center center;
+            position: absolute; bottom:1600px;
+             overflow: hidden; display: block;}
+        .sub4_1Tit{display: block;  font-family: 'Noto Sans KR', sans-serif;
+            width:1200px; height: 160px; margin:0 auto; line-height: 160px; text-align: center; color:#fff; font-size:50px; border-bottom: 1px solid #fff; font-weight: 200;}
+        .color{color:#debe7e;}
+        .sub4_1Com{display: block; width:100%; height: 100px; text-align: center; color:#fff; padding-top:40px; font-size:24px; font-weight: 100;}
+        .sub4_1content{width:100%; height: 400px; padding-top:70px;
+                    font-family: 'Noto Sans KR', sans-serif; font-weight: 300;
+                    line-height: 30px;}
+        
+        .colBox{width:900px; margin: 0 auto; color:#fff;}
+        .col4{width:200px; display: block; height: 300px; float:left;
+            margin-left:150px;}
+        .colTit{display: block; height: 50px; line-height: 50px; text-align: center; border-bottom: 1px solid #debe7e; font-family: 'Noto Sans KR', sans-serif; font-weight: 300; font-size:22px;}
+        .colCom{text-align: center; margin-top:30px; line-height: 24px;;}
+        .col4.first{margin-left:0px;}
+        
+        .colImg1{width:150px; height: 150px; background-image: url(img/icon1.png);
+                background-position: center center; background-repeat: no-repeat;
+                margin:0 auto;}
+        .colImg2{width:150px; height: 150px; background-image: url(img/icon2.png);
+                background-position: center center; background-repeat: no-repeat;
+                margin:0 auto;}
+        .colImg3{width:150px; height: 150px; background-image: url(img/icon3.png);
+                background-position: center center; background-repeat: no-repeat;
+                margin:0 auto;}
+        
+        
+        
+        .backImg4_2{width:100%; height:1500px; position: absolute; bottom:0px;}
+        .storeWrap{width:1200px; margin: 0 auto;}
+        .storeTit{text-align: center; clear: both;}
+        .storeTit h1{font-size:40px; color:#555; line-height: 100px; border-bottom: 1px solid #999;}
+        .storeTit p{padding-top:15px;font-size:20px; color:#555;}
+        .storeImg{float: left; display: block; width: 50%;}
+        
+        
+        .storeItem1{width:900px; margin: 0 auto; margin-top: 30px; clear: both;}
+        .storeItem1 li{float:left;}
+        .storeimgBox{margin-top:30px;}
+        .txtBox{margin-left:100px; padding-top:50px; width:500px;}
+        .txtBox h1{border-bottom: 1px solid #999; padding-bottom: 15px;}
+        .txtBox p{padding-top:15px;}
+        .brand{font-size:18px; color:#276d35; }
+        .storeBtn{display:block;color:#333; width:100px; height: 30px;  text-align: center; line-height: 30px;margin-top: 20px; border-radius: 17px; background-color:#ec6e3b; color:#fff;}
+        .storeBtn:hover{background-color:#276d35;}
+        
+        
+        
+        /*   sub5   */
+        
+        #sub5{display: block; width:100%; height: 800px; background-image: url(img/sec5.png); background-size:cover;}
+        
+        .videoWrap{display: block; width:900px; height: 506px; margin:0 auto;
+                  padding-top:147px;}
+        
+        
+        /*    pop    */
+        
+        .popWrap{position: fixed; width:100%; height:100%;
+                left:0px;  top:0px; background: rgba(0, 0, 0, 0.5);
+            z-index:9998; display: none;}
+        
+        .popCon{width:1000px; height: 548px; background-position: center center; background-image: url(img/popimg.png);
+                margin: 0 auto; margin-top:250px; position: relative;}
+        
+        .chkBtn{width:30px; height:30px; background-image: url(img/chkBtn.png); position: absolute; top:30px; right: 30px;
+        background-color:rgba(0, 0, 0, 0.3); border-radius: 15px;
+        background-repeat: no-repeat; background-position: center center;}
+        
+        
+        #popCk1:checked ~ .pop .popWrap{display: block;}
+        #popCk1{display: none;}
+        
+        
+        
+        /*   footer     */
+        .ft{width:100%; height: 150px; background-color:#ad975d;
+            }
+        .copy p{font-size:0.9em; text-align: center;
+        color:#fff; padding-top:40px; font-weight: 100;}
+        
+        
+        
+        
+        .down4{ width: 50px; height: 50px; background-image: url(img/down.png);
+                background-position: center 3px;
+                margin:0 auto; background-color:rgba(255,255,255, 0.3);
+                border-radius: 25px; margin-top:270px;}
+        
+        
+        
+        
+        #sub1{background-image: url(img/sec2.png); background-size:60%;
+        background-repeat: no-repeat; background-position: center 70px;}
+    </style>
+    
+    
+    
+</head>
+<body>
+   
+   <header class="header">
+      
+      <div class="hdwrap1">
+          
+          <h1 class="logo">logo</h1>
+          
+      </div>
+       
+       <div class="hdwrap2">
+           
+           <nav id="gnb">
+               <ul class="mnb clearfix">
+                   <li>
+                       <label for="main" class="on">HOME</label>
+                   </li>
+                   <li>
+                       <label for="sub1">ABOUT</label>
+                   </li>
+                   <li>
+                       <label for="sub2">BLACKTEA</label>
+                   </li>
+                   <li>
+                       <label for="sub3">COFFEE</label>
+                   </li>
+                   <li>
+                       <label for="sub4">BRUNCH</label>
+                   </li>
+                   <li>
+                       <label for="sub5">TVCF</label>
+                   </li>
+                   <li>
+                       <label for="popCk1">EVENT</label>
+                   </li>
+               </ul>
+           </nav>
+           
+       </div>
+   </header>
+   
+   <div class="pg" id="main">
+          
+       <figure class="vs">
+          
+           <ul class="imgBox">
+               <li class="item1">
+                   <span class="more"></span>
+               </li>
+               
+               <li class="item2">
+                    <span class="more"></span>
+               </li>
+           </ul>
+           
+           
+           <ul class="lrbtnBox">
+               <li class="leftFr">
+               <button class="lrBtn left"></button>
+               </li>
+               <li class="rightFr">
+               <button class="lrBtn right"></button>
+               </li>
+           </ul>
+           
+           
+           <div class="slideBtnBox">
+           
+           <ul class="slideBtnFrm">
+               <li class="iBtn item1Btn1">
+                  <button class="slidBtn"></button>
+               </li>
+               <li class="iBtn item1Btn2">
+                   <button class="slidBtn"></button>
+               </li>
+           </ul>
+           
+           </div>
+           
+       </figure>
+       
+       
+   </div>
+   
+   <div class="pg" id="sub1">
+       
+       <div class="pageSub1">
+           
+           <div class="backImg">
+               
+           </div>
+           
+           <ul>
+               <li>
+                   <img src="" alt="">
+                   <p></p>
+               </li>
+               <li>
+                   <img src="" alt="">
+                   <p></p>
+               </li>
+               <li>
+                   <img src="" alt="">
+                   <p></p>
+               </li>
+           </ul>
+           
+           
+       </div>
+       
+   </div>
+   
+   
+   <div class="pg" id="sub2">
+       
+       <div class="conBox backImg2">
+           
+           <div class="sub2content">
+           <h1 class="sub2Tit">
+           BLACK TEA
+           </h1>
+           
+           <p class="sub2Com">
+              홍차는 항산화 기능과 비타민C 보다 강한 카테킨이 함유되어있습니다.<br>
+              노화 방지, 항암 등의 효과가 있고 깔끔하고 개운한 풍미와 깊은 향기로
+              릴렉스와 힐링 효과에 탁월합니다.<br>
+              천천히 스미는 개운하고 깔끔한 따뜻함을 즐겨보세요.<br> 
+           </p>
+           
+           <a href="#btInfo" class="btInfoBtn">
+               홍차의 효능
+           </a>
+           
+           </div>
+           
+           <div class="down">
+           
+           </div>
+       </div>
+       
+       
+   </div>
+   
+   <div class="pg" id="sub3">
+       
+       <div class="conBox backImg3">
+           
+           <div class="sub3content">
+           <h1 class="sub3Tit">
+           COFFEE
+           </h1>
+           
+           <p class="sub3Com">
+              희스밀은 유럽 고급 원두를 사용하여 직접 로스팅한 커피만을 판매합니다.<br>
+              고급 원두에서 느껴지는 깊은 풍미와 진한 향기를 희스밀이 마련한 아름다운 공간에서<br>
+              소중한 경험으로 남겨지길 바랍니다. 
+           </p>
+           
+           </div>
+           
+           <div class="down">
+           
+           </div>
+           
+       </div>
+       
+   </div>
+   
+   <div class="pg" id="sub4">
+       
+       <div class="conBox backImg4">
+           
+           <div class="sub4content">
+           <h1 class="sub4Tit">
+           BRUNCH
+           </h1>
+           
+           <p class="sub4Com">
+              희스밀은 신선한 재료만을 엄선하여 10여종의 다양한 수제 브런치를 제공합니다.<br>
+              건강한 브런치 메뉴와 함께 따뜻한 홍차를 곁들여<br>
+              따뜻하고 여유로운 오후 시간을 즐겨보세요.
+           </p>
+           
+           <div class="down">
+           
+           </div>
+           </div>
+           
+           <div class="conBox backImg4_1">
+              
+              <div class="sub4_1content">
+               <h1 class="sub4_1Tit">
+                   HEESSMILL <span class="color">CLASS·COURSE</span>
+               </h1>
+           
+           <p class="sub4_1Com">
+              희스밀은 홍차의 따뜻함을 많은 분들과 나누기 위해<br>
+              클래스와 체험코스를 진행합니다.<br>
+           </p>
+           
+           <div class="colBox">
+              
+              <div class="col4 first">
+                  <div class="colImg1">
+                      
+                  </div>
+                  <h3 class="colTit">
+                      BLACKTEA
+                  </h3>
+                  <p class="colCom">
+                      여러가지 홍차의 맛과 향을<br>
+                      시음해 보고 찻잎에 따른<br>
+                      알맞은 우림 공법에 대해<br>
+                      체험하는 클래스 입니다.
+                  </p>
+              </div>
+              <div class="col4">
+                  <div class="colImg2">
+                      
+                  </div>
+                  <h3 class="colTit">
+                      AFTERNOON TEA
+                  </h3>
+                  <p class="colCom">
+                      독립된 공간에서<br>
+                      영국의 문화인 애프터눈티를<br>
+                      체험하는 코스 입니다.
+                  </p>
+              </div>
+              <div class="col4">
+                  <div class="colImg3">
+                      
+                  </div>
+                  <h3 class="colTit">
+                      DESSERT
+                  </h3>
+                  <p class="colCom">
+                      홍차에 어울리는 디저트를<br>
+                      시식해보고 원하는 디저트를<br>
+                      함께 만들어보는 클래스 입니다.<br>
+                  </p>
+              </div>
+               
+           </div>
+           
+           </div>
+               
+           </div>
+           
+            <div class="conBox backImg4_2">
+           <div class="storeWrap">
+           
+           <div class="storeTit">
+               <h1>고급 원두의 깊이를 맛보다.</h1>
+               <p>희스밀에서 직수입하여 판매하고있는 고급 원두 입니다.<br>
+               깊은 풍미와 진한 매력을 느껴보세요.</p>
+           </div>
+           
+           <div class="storeLst">
+               
+               <ul>
+                   <li>
+                      <ul class="storeItem1">
+                          <li class="storeimgBox">
+                              <img src="img/600.png" alt="">
+                          </li>
+                          <li class="txtBox">
+                              <h1><span class="brand">스텀프타운 헤어밴더</span><br>
+                           원두커피 3팩 세트
+                           </h1>
+                           <p>스텀프타운 커피는 1999년 미국 포틀랜드에서<br>
+                           처음시작한 스페셜티의 맏형입니다.<br>
+                           원두를 섬세하고 까다롭게 선택해서 소비자들에게<br>
+                           사랑받는 스페셜티 커피의 대부라고도 불려집니다.</p>
+                           <a href="#" class="storeBtn">구매하기</a>
+                          </li>
+                      </ul>
+                   </li>
+                   
+                   <li>
+                      <ul class="storeItem1">
+                          <li class="storeimgBox">
+                              <img src="img/600.png" alt="">
+                          </li>
+                          <li class="txtBox">
+                              <h1><span class="brand">스텀프타운 헤어밴더</span><br>
+                           원두커피 3팩 세트
+                           </h1>
+                           <p>스텀프타운 커피는 1999년 미국 포틀랜드에서<br>
+                           처음시작한 스페셜티의 맏형입니다.<br>
+                           원두를 섬세하고 까다롭게 선택해서 소비자들에게<br>
+                           사랑받는 스페셜티 커피의 대부라고도 불려집니다.</p>
+                           <a href="#" class="storeBtn">구매하기</a>
+                          </li>
+                      </ul>
+                   </li>
+                   
+                   <li>
+                      <ul class="storeItem1">
+                          <li class="storeimgBox">
+                              <img src="img/600.png" alt="">
+                          </li>
+                          <li class="txtBox">
+                              <h1><span class="brand">스텀프타운 헤어밴더</span><br>
+                           원두커피 3팩 세트
+                           </h1>
+                           <p>스텀프타운 커피는 1999년 미국 포틀랜드에서<br>
+                           처음시작한 스페셜티의 맏형입니다.<br>
+                           원두를 섬세하고 까다롭게 선택해서 소비자들에게<br>
+                           사랑받는 스페셜티 커피의 대부라고도 불려집니다.</p>
+                           <a href="#" class="storeBtn">구매하기</a>
+                          </li>
+                      </ul>
+                   </li>
+                   
+                   
+               </ul>
+               
+           </div>
+           
+           </div>
+        </div>
+           
+       </div>
+       
+       
+   </div>
+   
+   <div class="pg" id="sub5">
+       
+     <div class="videoWrap">
+         <iframe width="900" height="506" src="https://www.youtube.com/embed/chR6t8J_S8s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+   </div>
+    
+    
+    <footer class="ft">
+       
+       <ul>
+           <li class="logo2">
+               
+           </li>
+           <li class="copy">
+            <p>
+             대전광역시 유성구 궁동 죽동로279번길 80｜TEL : 042-824-3188<br>
+             희스밀 대표이사 : 윤희린｜사업자등록번호:135-02-45282<br>
+             COPRIGHT ⓒCAFE HEESMILL ALL RIGHT RESERVED
+             </p>
+           </li>
+       </ul>
+       
+        
+    </footer>
+    
+    
+     
+    <input type="checkbox" id="popCk1" class="chk">
+    
+    <div class="pop" id="sub6">
+
+       <div class="popWrap">
+           <div class="popCon">
+           
+             <label for="popCk1" class="chkBtn"></label>
+           
+           </div>
+           
+       </div>
+   
+           
+   </div>
+   
+    <div class="pop2">
+         
+         <div class="popWrap">
+             
+             
+             
+         </div>
+         
+    </div>
+   
+</body>
+</html>
