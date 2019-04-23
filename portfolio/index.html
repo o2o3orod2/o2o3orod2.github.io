@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio by Yeo</title>
+
+     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    
+    <!--  폰트연결  -->
+    <link href="https://fonts.googleapis.com/css?family=Heebo:100,300,400,500,700|Noto+Sans+KR:100,300,400,500,700,900" rel="stylesheet">
+    
+    
+    <!--  css파일연결  -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main.css">
+    
+    
+    <script src="js/jquery-1.11.1.js"></script>
+    
+    <script>
+    $(document).ready(function(){
+     
+        var win_h = $(window).height();
+        $(".page").each(function(index){
+            $(this).attr("data-page", win_h*index);
+        });
+        
+        
+        
+       $(".page").on("mousewheel", function(e){
+          
+           var curPage = parseInt($(this).attr("data-page"));
+           
+            if(e.originalEvent.wheelDelta >= 0){
+                $("body, html").stop().animate({scrollTop:curPage - win_h});
+                return false;
+            } else {
+                $("body, html").stop().animate({scrollTop:curPage + win_h});
+                return false;
+            };
+           
+           
+        });
+        
+           
+       });
+        
+    </script>
+    
+    <script>
+    
+        $(document).ready(function(){
+           
+             $(".page").on("mousewheel", function(e){
+          
+            var x = parseInt($(window).scrollTop());
+                 
+            if(x >= -300){
+                
+                $(".deskft").addClass("on");
+                $(".dcopy").addClass("on"); 
+            };
+           
+           
+        });
+            
+            
+        });
+    
+    </script>
+    
+    <script>
+        $(document).ready(function(){
+           
+            $(".dep").click(function(){
+               
+                $(this).parent().css("transform","rotateY(180deg)");
+                
+            });
+            
+        });
+    
+    </script>
+    
+    <script>
+        
+        $(document).ready(function(){
+          
+            $("#gnbCall").change(function(){
+               
+                if($(this).is(":checked")){
+                    $(".pg1_wrap, .deskft, .pg2_wrap, .pg3_wrap").css("filter","blur(4px)");
+                }else{
+                   $(".pg1_wrap, .deskft, .pg2_wrap, .pg3_wrap").css("filter","blur(0px)"); 
+                }
+                
+            });
+            
+        });
+        
+    </script>
+    
+    <script>
+    
+        $(document).ready(function(){
+           
+            var roll = setInterval(function(){
+                
+                rollAni();
+                
+            },3000);
+            
+            
+            
+            var i = 0;
+
+            function rollAni(){
+               
+              
+
+                i = i + 90; 
+                $(".videoBox").css("transform","rotateX("+i+"deg)");
+                
+                
+                $(".videoWrap").mouseover(function(){
+               
+                clearInterval(roll);
+                
+                });
+                
+  
+ 
+            };
+            
+            
+             $(".videoWrap").mouseleave(function(){
+                 
+                 
+                    roll = setInterval(function(){
+
+                    rollAni();
+
+                    },3000);
+
+                    
+                 
+                });
+             
+            
+            
+            
+            $(".video").click(function(){
+               
+                clearInterval(roll);
+                
+                $(".play").get(0).play();
+                
+                
+            });
+            
+            
+            
+        });
+       
+    
+    
+    </script>
+    
+    
+
+</head>
+<body>
+   
+   
+       
+       <header class="hd">
+           
+           <h1 class="logo">
+               <a href="#"></a>
+           </h1>
+           
+           
+           <input type="checkbox" id="gnbCall">
+           
+           <label for="gnbCall" class="gnbBtn">
+               <span></span>
+               <span></span>
+               <span></span>
+           </label>
+           
+           
+           
+           <nav class="gnbWrap">
+              
+              
+              <div class="pic">
+              </div>
+              
+              
+               
+               <ul class="gnb">
+                  <li>
+                       <a href="#" class="dep">HOME</a>
+                       <div class="depback">
+                           HOME
+                       </div>
+                    </li>
+                   <li>
+                       <a href="#" class="dep">ABOUT ME</a>
+                       <div class="depback">
+                           ABOUT ME
+                       </div>
+                    </li>
+                    <li>
+                       <a href="#" class="dep">WORKING</a>
+                       <div class="depback">
+                           WORKING
+                       </div>
+                    </li>
+                    <li>
+                       <a href="#" class="dep">SKILLS</a>
+                       <div class="depback">
+                           SKILLS
+                       </div>
+                    </li>
+                    <li>
+                       <a href="#" class="dep">CONTACT</a>
+                       <div class="depback">
+                           CONTACT
+                       </div>
+                    </li>
+               </ul>
+               
+           </nav>
+           
+           
+           <div class="gnbSnsLst" id="desk">
+               
+               <ul>
+                   <li>
+                       <a href="#">
+                           <img src="img/gnb_sns_f.png" alt="#">
+                        </a>
+                    </li>
+                    <li>
+                       <a href="#">
+                           <img src="img/gnb_sns_i.png" alt="#">
+                        </a>
+                    </li>
+                    <li>
+                       <a href="#">
+                           <img src="img/gnb_sns_b.png" alt="#">
+                        </a>
+                    </li>
+               </ul>
+               
+           </div>
+           
+           
+       </header>
+       
+       
+       <div class="pg1_wrap page" data-page="0">
+         
+         <div class="deco1"></div>
+         
+         <div class="deco2"></div>
+          
+          <div class="righttxt">
+              PORTFOLIO BY YEO KYUNGHEE
+          </div>
+           
+           <div class="pg1_txtBox">
+               <p class="p1_tit">
+                HI,
+               </p>
+               <p class="p1_com">
+                   I am<br>
+               </p>
+               <div class="p1_comLstWrap">
+                      <ul class="p1_comLst">
+                           <li class="ls1" >YeoKyunghee</li>
+                           <li class="ls2">Creative</li>
+                           <li class="ls3">Passionate</li>
+                           <li class="ls4">Develop</li>
+                      </ul> 
+               </div>
+
+           </div>
+           
+           
+           <div class="scroll">
+              
+              <div class="scroll_wrap">
+                   <span class="sctxt1">SCROLL</span>
+                   <div class="scroll_icon">
+                       <div class="sc_icon_inner"></div>
+                   </div>
+                   <span class="sctxt2">DOWN</span>
+              </div>            
+           </div>
+
+       </div>
+       
+
+           <div class="pg2_wrap page" data-page="1">
+           
+           <div class="pg2_Tit">
+               MY WORKS
+           </div>
+           
+           <div class="selLst_wrap">
+               <ul class="selLst">
+                   <li>
+                       <button>Concept Define</button>
+                   </li>
+                   <li>
+                      <button>Data Search</button>
+                   </li>
+                   <li>
+                      <button>Sample Design</button>
+                   </li>
+                   <li>
+                      <button>Coding</button>
+                   </li>
+               </ul>
+               
+           </div>
+           
+           
+           <div class="videoWrap">
+               
+               
+               <div class="videoBox">
+                   
+                   <div class="video video1">
+                       <video class="play" src="./video/video1.mp4" poster="img/videoposter1.jpg"></video>
+                   </div>
+                   <div class="video video2">
+                       <video class="play" src="./video/video2.mp4" poster="http://placehold.it/330x240/86b935"></video>
+                   </div>
+                   <div class="video video3">
+                       <video class="play" src="./video/video3.mp4"  poster="http://placehold.it/330x240/1b6ef4"></video>
+                   </div>
+                   <div class="video video4">
+                       <video class="play" src="./video/video4.mp4"  poster="http://placehold.it/330x240/e818a0"></video>
+                   </div>
+
+                   
+               </div>
+               
+               
+           </div>
+           
+           
+           <a href="#" class="work">WORKS MORE</a>
+           
+           
+       </div>
+       
+       
+       
+       <div class="pg3_wrap page" data-page="2">
+       
+       
+           <div class="pg3_Tit">
+               ABOUT ME
+           </div>
+                          
+           <div class="deco"></div>
+       
+            <p class="pg3_com">
+                 <span>"어떻게?"</span>는<br>　또 다른 배움의 시작이다.</p>   
+                  
+           <div class="content"></div>
+       
+       
+           <a href="#" class="aboutBtn">About me</a>
+       
+       </div>
+         
+       
+       
+       <footer class="ft" id="mo">
+           
+           <h1 class="ftlogo">
+              <a href="index.html">
+                  <img src="./img/logo2.png" alt="">
+              </a>
+           </h1>
+           
+           
+           <div class="right_sec">
+              
+              <nav class="ftnav">
+               <ul>
+                   <li>
+                       <a href="#">ABOUT ME</a>
+                   </li>
+                   <li>
+                       <a href="#">WORKING</a>
+                   </li>
+                   <li>
+                       <a href="#">SKILLS</a>
+                   </li>
+                   <li>
+                       <a href="#">CONTACT</a>
+                   </li>
+               </ul>
+           </nav>
+              
+           </div>
+           
+           
+             <p class="copy">All right Reserved - Kyunghee Yeo</p>
+           
+           
+           
+       </footer>
+   
+       
+       <footer class="deskft" id="desk">
+           
+           <p class="dcopy">Copyright by <span>kyunghee Yeo</span> | 010-7700-2738</p>
+           
+           <div class="snsLst">
+               
+               <ul>
+                   <li>
+                       <a href="#">
+                           <img src="/img/facebook_w.png" alt="">
+                       </a>
+                    </li>
+                   <li>
+                       <a href="#">
+                           <img src="/img/insta_w.png" alt="">
+                       </a>
+                   </li>
+               </ul>
+               
+           </div>
+           
+           
+       </footer>
+   
+    
+</body>
+</html>
