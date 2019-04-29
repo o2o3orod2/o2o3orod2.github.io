@@ -63,11 +63,13 @@
                   
                  $(".logo a").addClass("on");
                  $(".gnbBtn").addClass("on");
+                 $(".pg2_tit").addClass("on");
                  
              } else if(sc == 0){
                  
                  $(".logo a").removeClass("on");
                  $(".gnbBtn").removeClass("on");
+                 
                  
              };
                 
@@ -155,6 +157,38 @@
     
     </script>
     
+    <script>
+    
+    $(document).ready(function(){
+       
+        $(".item1").click(function(){
+            $(".workImg").attr("src","img/moon.png");
+        });
+        
+        $(".item2").click(function(){
+            $(".workImg").attr("src","img/peacock.png");
+        });
+        
+        $(".item3").click(function(){
+            $(".workImg").attr("src","img/cheonan.png");
+        });
+        
+        $(".item4").click(function(){
+            $(".workImg").attr("src","img/coway.png");
+        });
+        
+        $(".item5").click(function(){
+            $(".workImg").attr("src","img/g.png");
+        });
+        
+        $(".item6").click(function(){
+            $(".workImg").attr("src","img/junglim.png");
+        });
+        
+        
+    });
+    
+    </script>
     
 
 </head>
@@ -261,29 +295,45 @@
             <div class="workWrap">
                 
                 <div class="workView">
-                    
+                    <ul>
+                        <li>
+                            <img class="workImg" src="img/moon.png" alt="">
+                        </li>
+                    </ul>
                 </div>
                 
                 <div class="workSelectWrap">
                     
                     <ul class="workSelect">
                         <li>
-                            
+                            <label for="">
+                                <img class="item1" src="img/moon.png" alt="">
+                            </label>
                         </li>
                         <li>
-                            
+                            <label for="">
+                                <img class="item2" src="img/peacock.png" alt="">
+                            </label>
                         </li>
                         <li>
-                            
+                            <label for="">
+                                <img class="item3" src="img/cheonan.png" alt="">
+                            </label>
                         </li>
                         <li>
-                            
+                            <label for="">
+                                <img class="item4" src="img/coway.png" alt="">
+                            </label>
                         </li>
                         <li>
-                            
+                            <label for="">
+                                <img class="item5" src="img/g.png" alt="">
+                            </label>
                         </li>
                         <li>
-                            
+                            <label for="">
+                                <img class="item6" src="img/junglim.png" alt="">
+                            </label>
                         </li>
                     </ul>
                     
@@ -299,6 +349,9 @@
      
       <div class="pg2_wrap page" data-page="1">
            
+           <div class="pg2_tit">
+              
+           </div>
          
                
            
