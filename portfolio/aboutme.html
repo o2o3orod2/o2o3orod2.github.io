@@ -14,7 +14,7 @@
     
     <!--  css파일연결  -->
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/aboutme.css">
     
     
     <script src="js/jquery-1.11.1.js"></script>
@@ -43,6 +43,53 @@
            
            
         });
+        
+        
+           
+            
+            
+            
+        
+            $(".page").on("mousewheel",function(index){
+            
+            var sc = $(window).scrollTop();
+            var ht = $(window).height();
+                
+            console.log(sc*2);    
+                
+             if(sc >= sc*1){
+                 
+                 
+                 
+                 $(".circle").addClass("on");
+                 $(".pg2Tit").addClass("on");
+                 
+                 $(".conTit").addClass("on");
+                 $(".contentWrap img").addClass("on");
+                 
+                 $(".logo a").addClass("on");
+                 $(".gnbBtn").addClass("on");
+             };
+                
+            if(sc >= ht*1){
+                 
+                 $(".myimg").addClass("on");
+                 $(".circle2").addClass("on");
+                 $(".pg3Tit").addClass("on");
+                
+                 $(".line").addClass("on");
+                 $(".pg3_txtTit").addClass("on");
+                 $(".pg3_txtCom").addClass("on");
+                 $(".picTit").addClass("on");
+                
+             };
+                
+                
+            
+        });
+        
+        
+        
         
            
        });
@@ -107,66 +154,11 @@
     
         $(document).ready(function(){
            
-            var roll = setInterval(function(){
-                
-                rollAni();
-                
-            },3000);
             
-            
-            
-            var i = 0;
-
-            function rollAni(){
-               
-              
-
-                i = i + 90; 
-                $(".videoBox").css("transform","rotateX("+i+"deg)");
-                
-                
-                
-                $(".videoWrap").mouseover(function(){
-               
-                clearInterval(roll);
-                
-                });
-                
-  
- 
-            };
-            
-            
-             $(".videoWrap").mouseleave(function(){
-                 
-                 
-                    roll = setInterval(function(){
-
-                    rollAni();
-
-                    },3000);
-
-                    
-                 
-                });
-             
-            
-            
-            
-            $(".video").click(function(){
-               
-                clearInterval(roll);
-                
-                $(".play").get(0).play();
-                
-                
-            });
-            
+            $(".textani").addClass("on");
             
             
         });
-       
-    
     
     </script>
     
@@ -180,7 +172,7 @@
        <header class="hd">
            
            <h1 class="logo">
-               <a href="#"></a>
+               <a href="index.html"></a>
            </h1>
            
            
@@ -210,25 +202,25 @@
                        </div>
                     </li>
                    <li>
-                       <a href="aboutme.html" class="dep">ABOUT ME</a>
+                       <a href="about.html" class="dep">ABOUT ME</a>
                        <div class="depback">
                            ABOUT ME
                        </div>
                     </li>
                     <li>
-                       <a href="#" class="dep">WORKING</a>
+                       <a href="working.html" class="dep">WORKING</a>
                        <div class="depback">
                            WORKING
                        </div>
                     </li>
                     <li>
-                       <a href="#" class="dep">SKILLS</a>
+                       <a href="skills.html" class="dep">SKILLS</a>
                        <div class="depback">
                            SKILLS
                        </div>
                     </li>
                     <li>
-                       <a href="#" class="dep">CONTACT</a>
+                       <a href="contact.html" class="dep">CONTACT</a>
                        <div class="depback">
                            CONTACT
                        </div>
@@ -266,111 +258,71 @@
        
        <div class="pg1_wrap page" data-page="0">
          
-         <div class="deco1"></div>
-         
-         <div class="deco2"></div>
-         
-         <div class="deco3 desk"></div>
-          
-          <div class="righttxt">
-              PORTFOLIO BY YEO KYUNGHEE
-          </div>
-           
-           <div class="pg1_txtBox">
-               <p class="p1_tit">
-                HI,
-               </p>
-               <p class="p1_com">
-                   I am<br>
-               </p>
-               <div class="p1_comLstWrap">
-                      <ul class="p1_comLst">
-                           <li class="ls1" >YeoKyunghee</li>
-                           <li class="ls2">Creative</li>
-                           <li class="ls3">Passionate</li>
-                           <li class="ls4">Develop</li>
-                      </ul> 
-               </div>
-
-           </div>
-           
-           
-           <div class="scroll">
+         <div class="pg1_top">
+                 <h2 class="aboutme_tit">
+                    <span class="txt1 textani">나로</span>
+                    <span class="txt2 textani">말할것</span>
+                    <span class="txt3 textani">같으면</span>
+                 </h2>
+                 
+             <div class="scroll">
               
               <div class="scroll_wrap">
-                   <span class="sctxt1">SCROLL</span>
+                  <span class="scrolltxt">SCROLL</span>
                    <div class="scroll_icon">
                        <div class="sc_icon_inner"></div>
                    </div>
-                   <span class="sctxt2">DOWN</span>
-              </div>            
-           </div>
-
+              </div>    
+                      
+           </div>  
+           
+         </div>
+         
+         
+         
+         
+        
        </div>
        
 
-           <div class="pg2_wrap page" data-page="1">
+     
+      <div class="pg2_wrap page" data-page="1">
            
-           <div class="pg2_Tit">
-               MY WORKS
-           </div>
+           <h1 class="pg2Tit">
+               ABOUT ME
+           </h1>
+           <div class="circle"></div>
            
-           <div class="selLst_wrap">
-               <ul class="selLst">
-                   <li>
-                       <button>Concept Define</button>
-                   </li>
-                   <li>
-                      <button>Data Search</button>
-                   </li>
-                   <li>
-                      <button>Sample Design</button>
-                   </li>
-                   <li>
-                      <button>Coding</button>
-                   </li>
-               </ul>
+           
+              <ul class="contentWrap">
+                  <li class="con1">
+                     <div class="conTit">
+                         알콜 없이 분위기에 취하고<br>
+                         메모장엔 먹고싶은<br>
+                         음식이 가득한,<br>
+                         인생은 폭식과 후회의<br>
+                         연속이라 말하는 사람.
+                     </div>
+                      <img src="./img/aboutme_1.png" alt="">
+                  </li>
+                  <li class="con2">
+                       <div class="conTit">
+                         나이들며 느낀건<br>모른다는 핑계는 어릴 때만<br> 먹힌다는것.<br>모른다고 하지말자.<br> 꾸준히 하면 실력이 된다.
+                     </div>
+                      <img src="./img/aboutme_2.png" alt="">
+                  </li>
+                  <li class="con3">
+                       <div class="conTit">
+                         애증의 관계 코딩.<br>
+                         들었다 놨다 하는 코딩의<br>
+                         매력에 빠진 지금,<br>
+                         새로운 도전을 위한<br>
+                         구직 활동 중!
+                     </div>
+                      <img src="./img/aboutme_3.png" alt="">
+                  </li>
+              </ul>
                
-           </div>
-           
-           
-           <div class="videoWrap">
-               
-               
-               <div class="videoBox">
-                   
-                   <div class="video video1">
-                       <video class="play" src="./video/Sequence01.mp4" poster="./img/videoposter1.jpg"></video>
-                   </div>
-                   <div class="video video2">
-                       <video class="play" src="./video/Sequence02.mp4" poster="./img/videoposter2.jpg"></video>
-                   </div>
-                   <div class="video video3">
-                       <video class="play" src="./video/Sequence03.mp4"  poster="./img/videoposter3.jpg"></video>
-                   </div>
-                   <div class="video video4">
-                       <video class="play" src="./video/Sequence05.mp4"  poster="./img/videoposter4.jpg"></video>
-                   </div>
-
-                   
-               </div>
-               
-               
-               <div class="videoWrapback desk">
-                   <p>MY WORK<br>
-                      <span>PROCESS</span><br>
-                      VIDEO
-                   </p>
-               </div>
-               
-               
-           </div>
-           
-           
-           
-           
-           <a href="#" class="work">WORKS MORE</a>
-           
            
        </div>
        
@@ -378,24 +330,67 @@
        
        <div class="pg3_wrap page" data-page="2">
        
-       
-           <div class="pg3_Tit">
-               WHO AM I?
-           </div>
-                          
-           <div class="deco"></div>
-       
-            <p class="pg3_com">
-                 <span>"어떻게?"</span>는<br>　또 다른 배움의 시작이다.</p>   
+           <div class="pg3_con">
+               
+               <h1 class="pg3Tit desk">
+                    EXPERIENCE
+               </h1>
+               <div class="circle2 desk"></div>
+               
+               <div class="myimg">
+                 <div class="line"></div>  
+               </div>
+               
+               <p class="picTit">"꾸준히하면 실력이된다."</p>
+               
+             <div class="pg3_txtWrap">
+                 
+                 <div class="pg3_txt1">
+                   
+                    <h3 class="pg3_txtTit">
+                        Education.
+                    </h3>                   
+                   
+                   <div class="pg3_txtCom">
+                       <p class="year">
+                       2011-2013 
+                       </p>
+                       <p>
+                        우송정보대학 실용음악과(졸업)
+                       </p>
+                  </div>
                   
-                    
-           <div class="content"></div>
-  
-       
-           <a href="#" class="aboutBtn">ABOUT ME</a>
+                </div>
+                 
+                  <div class="pg3_txt2">
+                   
+                    <h3 class="pg3_txtTit">
+                        Work Experience
+                    </h3>                   
+                   
+                   <div class="pg3_txtCom">
+                       <p class="year">
+                       2016-2018 
+                       </p>
+                       <p>
+                        (주)계림요업_영업부
+                       </p>
+                       <p class="works">
+                           계림바스 공식 SNS 관리<br>
+                           계림바스 공식 네이버 블로그 관리<br>
+                           홍보 & 이벤트 컨텐츠 기획 및 제작<br>
+                           영업 지원 사무 및 인테리어 전시장 관리
+                       </p>
+                  </div>    
+                   
+               </div>
+                  
+               
+           </div>
        
        </div>
-         
+       
+      </div>   
        
        
        <footer class="ft" id="mo">

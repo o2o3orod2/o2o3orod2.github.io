@@ -14,7 +14,7 @@
     
     <!--  css파일연결  -->
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/working.css">
     
     
     <script src="js/jquery-1.11.1.js"></script>
@@ -43,6 +43,46 @@
            
            
         });
+        
+        
+           
+            
+            
+            
+        
+            $(".page").on("mousewheel",function(index){
+            
+            var sc = $(window).scrollTop();
+            var ht = $(window).height();
+                
+            console.log(sc*2);
+                
+                
+                
+             if(sc*1 > 0){
+                  
+                 $(".logo a").addClass("on");
+                 $(".gnbBtn").addClass("on");
+                 
+             } else if(sc == 0){
+                 
+                 $(".logo a").removeClass("on");
+                 $(".gnbBtn").removeClass("on");
+                 
+             };
+                
+                
+            if(sc >= ht*1){
+                 
+                
+             };
+                
+                
+            
+        });
+        
+        
+        
         
            
        });
@@ -107,66 +147,11 @@
     
         $(document).ready(function(){
            
-            var roll = setInterval(function(){
-                
-                rollAni();
-                
-            },3000);
             
-            
-            
-            var i = 0;
-
-            function rollAni(){
-               
-              
-
-                i = i + 90; 
-                $(".videoBox").css("transform","rotateX("+i+"deg)");
-                
-                
-                
-                $(".videoWrap").mouseover(function(){
-               
-                clearInterval(roll);
-                
-                });
-                
-  
- 
-            };
-            
-            
-             $(".videoWrap").mouseleave(function(){
-                 
-                 
-                    roll = setInterval(function(){
-
-                    rollAni();
-
-                    },3000);
-
-                    
-                 
-                });
-             
-            
-            
-            
-            $(".video").click(function(){
-               
-                clearInterval(roll);
-                
-                $(".play").get(0).play();
-                
-                
-            });
-            
+            $(".pg1_tit p").addClass("on");
             
             
         });
-       
-    
     
     </script>
     
@@ -180,7 +165,7 @@
        <header class="hd">
            
            <h1 class="logo">
-               <a href="#"></a>
+               <a href="index.html"></a>
            </h1>
            
            
@@ -210,25 +195,25 @@
                        </div>
                     </li>
                    <li>
-                       <a href="aboutme.html" class="dep">ABOUT ME</a>
+                       <a href="about.html" class="dep">ABOUT ME</a>
                        <div class="depback">
                            ABOUT ME
                        </div>
                     </li>
                     <li>
-                       <a href="#" class="dep">WORKING</a>
+                       <a href="working.html" class="dep">WORKING</a>
                        <div class="depback">
                            WORKING
                        </div>
                     </li>
                     <li>
-                       <a href="#" class="dep">SKILLS</a>
+                       <a href="skills.html" class="dep">SKILLS</a>
                        <div class="depback">
                            SKILLS
                        </div>
                     </li>
                     <li>
-                       <a href="#" class="dep">CONTACT</a>
+                       <a href="contact.html" class="dep">CONTACT</a>
                        <div class="depback">
                            CONTACT
                        </div>
@@ -266,111 +251,56 @@
        
        <div class="pg1_wrap page" data-page="0">
          
-         <div class="deco1"></div>
-         
-         <div class="deco2"></div>
-         
-         <div class="deco3 desk"></div>
-          
-          <div class="righttxt">
-              PORTFOLIO BY YEO KYUNGHEE
-          </div>
            
-           <div class="pg1_txtBox">
-               <p class="p1_tit">
-                HI,
-               </p>
-               <p class="p1_com">
-                   I am<br>
-               </p>
-               <div class="p1_comLstWrap">
-                      <ul class="p1_comLst">
-                           <li class="ls1" >YeoKyunghee</li>
-                           <li class="ls2">Creative</li>
-                           <li class="ls3">Passionate</li>
-                           <li class="ls4">Develop</li>
-                      </ul> 
-               </div>
-
+           <div class="pg1_tit">
+               <p><span>WORKING</span><br>
+               COLLECTION</p>
            </div>
-           
-           
-           <div class="scroll">
-              
-              <div class="scroll_wrap">
-                   <span class="sctxt1">SCROLL</span>
-                   <div class="scroll_icon">
-                       <div class="sc_icon_inner"></div>
-                   </div>
-                   <span class="sctxt2">DOWN</span>
-              </div>            
-           </div>
+         
+         
+            <div class="workWrap">
+                
+                <div class="workView">
+                    
+                </div>
+                
+                <div class="workSelectWrap">
+                    
+                    <ul class="workSelect">
+                        <li>
+                            
+                        </li>
+                        <li>
+                            
+                        </li>
+                        <li>
+                            
+                        </li>
+                        <li>
+                            
+                        </li>
+                        <li>
+                            
+                        </li>
+                        <li>
+                            
+                        </li>
+                    </ul>
+                    
+                    
+                </div>
 
+            </div>
+         
+        
        </div>
        
 
-           <div class="pg2_wrap page" data-page="1">
+     
+      <div class="pg2_wrap page" data-page="1">
            
-           <div class="pg2_Tit">
-               MY WORKS
-           </div>
-           
-           <div class="selLst_wrap">
-               <ul class="selLst">
-                   <li>
-                       <button>Concept Define</button>
-                   </li>
-                   <li>
-                      <button>Data Search</button>
-                   </li>
-                   <li>
-                      <button>Sample Design</button>
-                   </li>
-                   <li>
-                      <button>Coding</button>
-                   </li>
-               </ul>
+         
                
-           </div>
-           
-           
-           <div class="videoWrap">
-               
-               
-               <div class="videoBox">
-                   
-                   <div class="video video1">
-                       <video class="play" src="./video/Sequence01.mp4" poster="./img/videoposter1.jpg"></video>
-                   </div>
-                   <div class="video video2">
-                       <video class="play" src="./video/Sequence02.mp4" poster="./img/videoposter2.jpg"></video>
-                   </div>
-                   <div class="video video3">
-                       <video class="play" src="./video/Sequence03.mp4"  poster="./img/videoposter3.jpg"></video>
-                   </div>
-                   <div class="video video4">
-                       <video class="play" src="./video/Sequence05.mp4"  poster="./img/videoposter4.jpg"></video>
-                   </div>
-
-                   
-               </div>
-               
-               
-               <div class="videoWrapback desk">
-                   <p>MY WORK<br>
-                      <span>PROCESS</span><br>
-                      VIDEO
-                   </p>
-               </div>
-               
-               
-           </div>
-           
-           
-           
-           
-           <a href="#" class="work">WORKS MORE</a>
-           
            
        </div>
        
@@ -379,20 +309,7 @@
        <div class="pg3_wrap page" data-page="2">
        
        
-           <div class="pg3_Tit">
-               WHO AM I?
-           </div>
-                          
-           <div class="deco"></div>
        
-            <p class="pg3_com">
-                 <span>"어떻게?"</span>는<br>　또 다른 배움의 시작이다.</p>   
-                  
-                    
-           <div class="content"></div>
-  
-       
-           <a href="#" class="aboutBtn">ABOUT ME</a>
        
        </div>
          
