@@ -70,12 +70,15 @@
                  $(".logo a").removeClass("on");
                  $(".gnbBtn").removeClass("on");
                  
+                 $(".pg2_tit p").addClass("on");
+                 
                  
              };
                 
                 
             if(sc >= ht*1){
                  
+                $(".pg3_tit p").addClass("on");
                 
              };
                 
@@ -185,11 +188,66 @@
             $(".workImg").attr("src","img/junglim.png");
         });
         
+        $(".item2_1").click(function(){
+            $(".workImg2").attr("src","img/mobile_kelim.png");
+        });
+        
+        $(".item2_2").click(function(){
+            $(".workImg2").attr("src","img/mobile_busan.png");
+        });
+        
+        $(".item2_3").click(function(){
+            $(".workImg2").attr("src","img/mobile_celly.png");
+        });
+        
+        
+        
+        $(".item3_1").click(function(){
+            $(".workImg3").attr("src","img/pg_content1.png");
+        });
+        
+        $(".item3_2").click(function(){
+            $(".workImg3").attr("src","img/pg_content2.png");
+        });
+        
+        $(".item3_3").click(function(){
+            $(".workImg3").attr("src","img/pg_content3.png");
+        });
+        
+        $(".item3_4").click(function(){
+            $(".workImg3").attr("src","img/pg_content4.png");
+        });
+        
+        $(".item3_5").click(function(){
+            $(".workImg3").attr("src","img/pg_content6.png");
+        });
+        
+        $(".item3_6").click(function(){
+            $(".workImg3").attr("src","img/pg_content5.png");
+        });
         
     });
     
     </script>
+
     
+    <script>
+    
+        $(document).ready(function(){
+            
+            var hg = $(".workView img").height();
+           
+            
+            $(".workView").mouseover(function(){
+               $(".workimg").not(":animated").animate({"margin-top",-hg},5000);
+            });
+            
+            
+        });
+        
+    
+    </script>    
+
 
 </head>
 <body>
@@ -295,9 +353,14 @@
             <div class="workWrap">
                 
                 <div class="workView">
+                  
+                   <div class="workViewInner">
+                       <img src="img/moondesk.png" alt="" class="workimg">
+                   </div>
+                   
                     <ul>
                         <li>
-                            <img class="workImg" src="img/moon.png" alt="">
+                            <img class="workImg" src="img/moon2.png" alt="">
                         </li>
                     </ul>
                 </div>
@@ -306,34 +369,34 @@
                     
                     <ul class="workSelect">
                         <li>
-                            <label for="">
+                           
                                 <img class="item1" src="img/moon.png" alt="">
-                            </label>
+                        
                         </li>
                         <li>
-                            <label for="">
+                           
                                 <img class="item2" src="img/peacock.png" alt="">
-                            </label>
+                           
                         </li>
                         <li>
-                            <label for="">
+                            
                                 <img class="item3" src="img/cheonan.png" alt="">
-                            </label>
+                            
                         </li>
                         <li>
-                            <label for="">
+                            
                                 <img class="item4" src="img/coway.png" alt="">
-                            </label>
+                            
                         </li>
                         <li>
-                            <label for="">
+                            
                                 <img class="item5" src="img/g.png" alt="">
-                            </label>
+                            
                         </li>
                         <li>
-                            <label for="">
+                           
                                 <img class="item6" src="img/junglim.png" alt="">
-                            </label>
+                           
                         </li>
                     </ul>
                     
@@ -350,9 +413,42 @@
       <div class="pg2_wrap page" data-page="1">
            
            <div class="pg2_tit">
-              
+               <p><span>WORKING</span><br>
+               COLLECTION</p>
            </div>
          
+              
+            
+            <div class="workWrap2">
+                
+                <div class="workView2">
+                            <img class="workImg2" src="img/mobile_kelim.png" alt="">
+                </div>
+                
+                <div class="workSelectWrap2">
+                    
+                    <ul class="workSelect2">
+                        <li>
+                           
+                                <img class="item2_1" src="img/mobile_kelim.png" alt="">
+                        
+                        </li>
+                        <li>
+                           
+                                <img class="item2_2" src="img/mobile_busan.png" alt="">
+                           
+                        </li>
+                        <li>
+                            
+                                <img class="item2_3" src="img/mobile_celly.png" alt="">
+                            
+                        </li>
+                    </ul>
+                    
+                    
+                </div>
+
+            </div>    
                
            
        </div>
@@ -362,6 +458,57 @@
        <div class="pg3_wrap page" data-page="2">
        
        
+           <div class="pg3_tit">
+               <p><span>WORKING</span><br>
+               COLLECTION</p>
+           </div>
+           
+           <div class="workWrap3">
+                
+                <div class="workView3">
+                            <img class="workImg3" src="img/pg_content1.png" alt="">
+                </div>
+                
+                <div class="workSelectWrap3">
+                    
+                    <ul class="workSelect3">
+                        <li>
+                           
+                                <img class="item3_1" src="img/pg_content1.png" alt="">
+                        
+                        </li>
+                        <li>
+                           
+                                <img class="item3_2" src="img/pg_content2.png" alt="">
+                           
+                        </li>
+                        <li>
+                            
+                                <img class="item3_3" src="img/pg_content3.png" alt="">
+                            
+                        </li>
+                        
+                         <li>
+                           
+                                <img class="item3_4" src="img/pg_content4.png" alt="">
+                        
+                        </li>
+                        <li>
+                           
+                                <img class="item3_5" src="img/pg_content6.png" alt="">
+                           
+                        </li>
+                        <li>
+                            
+                                <img class="item3_6" src="img/pg_content5.png" alt="">
+                            
+                        </li>
+                    </ul>
+                    
+                    
+                </div>
+
+            </div>   
        
        
        </div>
