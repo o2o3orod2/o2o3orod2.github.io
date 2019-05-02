@@ -235,11 +235,13 @@
     
         $(document).ready(function(){
             
-            var hg = $(".workView img").height();
-           
             
             $(".workView").mouseover(function(){
-               $(".workimg").not(":animated").animate({"margin-top",-hg},5000);
+               $(".workimg").addClass("on");
+            });
+            
+            $(".workView").mouseleave(function(){
+               $(".workimg").removeClass("on");
             });
             
             
@@ -315,7 +317,7 @@
            </nav>
            
            
-           <div class="gnbSnsLst" id="desk">
+           <div class="gnbSnsLst desk">
                
                <ul>
                    <li>
@@ -351,8 +353,17 @@
          
          
             <div class="workWrap">
+               
+                <div class="workView mo">       
+                    <ul>
+                        <li>
+                            <img class="workImg" src="img/moon.png" alt="">
+                        </li>
+                    </ul>
+                </div>
+               
                 
-                <div class="workView">
+                <div class="workView desk">
                   
                    <div class="workViewInner">
                        <img src="img/moondesk.png" alt="" class="workimg">
